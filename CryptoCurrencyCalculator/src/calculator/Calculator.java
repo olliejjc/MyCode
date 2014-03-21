@@ -8,7 +8,7 @@ public class Calculator {
 
 	public static void main(String[] args) {
 		Calculator calc = new Calculator();
-		calc.calculate();
+		calc.calculate();//call calculate method
 
 	}
 
@@ -21,13 +21,13 @@ public class Calculator {
 		double amount = input.nextDouble();
 		System.out.println("Please enter current value of the currency: ");
 		double price = input.nextDouble();
-		double total = amount * price;
+		double total = amount * price;//total value of cryptocoins you own
 
 		System.out.println("You have " + amount + " " + crypto + " worth "
-				+ currencyType + total);
+				+ currencyType + total);//prints out amount of coins you own and their worth
 	}
 
-	String currencyType() {
+	String currencyType() {//choose the symbol of the currency you want to use
 		System.out.println("Please choose the currency you are using: ");
 		System.out.println("1 for $: ");
 		System.out.println("2 for €: ");
@@ -48,6 +48,6 @@ public class Calculator {
 
 
 		}
-		return cSymbol;
+		return cSymbol;//return currency symbol
 	}
 }

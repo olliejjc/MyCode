@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundlogo" >
+
+        <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="53dp"
+        android:background="#D9ff8802"
+        android:text="ENTER WEIGHT"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+    
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editcurrentWeight"
+        android:text="NB Please enter weight in kg...." />
+
+    <EditText
+        android:id="@+id/edittargetWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="230dp"
+        android:background="#D9c7d7db"
+        android:ems="10"
+        android:hint="Enter Target Weight"
+        android:inputType="numberDecimal"
+        android:textColor="#ff8802"
+        android:textColorHint="#ff8802" />
+
+    <EditText
+        android:id="@+id/editcurrentWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/edittargetWeight"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="44dp"
+        android:background="#D9c7d7db"
+        android:ems="10"
+        android:hint="Enter Current Weight"
+        android:inputType="numberDecimal"
+        android:textColor="#ff8802"
+        android:textColorHint="#ff8802" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/confirmweightbutton"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="19dp"
+        android:text="Confirm" />
+
+</RelativeLayout>

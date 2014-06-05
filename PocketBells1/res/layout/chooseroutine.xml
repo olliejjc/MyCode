@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <ListView
+        android:id="@+id/listViewRoutines"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:dividerHeight="@dimen/activity_horizontal_margin" >
+    </ListView>
+
+    <Button
+        android:id="@+id/routineconfirmbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/listViewRoutines"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:minWidth="20dp"
+        android:text="Confirm" />
+
+    <Button
+        android:id="@+id/routineresetbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/routineconfirmbutton"
+        android:layout_alignBottom="@+id/routineconfirmbutton"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="20dp"
+        android:text=" Reset "
+        android:textAlignment="center" />
+
+    <Button
+        android:id="@+id/routineviewbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/routineconfirmbutton"
+        android:layout_alignBottom="@+id/routineconfirmbutton"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:text=" View  " />
+
+</RelativeLayout>

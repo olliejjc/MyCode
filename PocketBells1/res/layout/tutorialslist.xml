@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundlogo"
+    android:orientation="vertical" >
+
+    <TableLayout
+        android:id="@+id/tableLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/exerciseButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/thumbnailburpees" />
+
+            <TextView
+                android:id="@+id/exercise1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingTop="15dp"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/exerciseButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/thumbnailfrontsquat" />
+
+            <TextView
+                android:id="@+id/exercise2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingTop="15dp"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/exerciseButton3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/thumbnailsnatch" />
+
+            <TextView
+                android:id="@+id/exercise3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingTop="15dp"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/exerciseButton4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/thumbnailswing" />
+
+            <TextView
+                android:id="@+id/exercise4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingTop="15dp"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ImageButton
+                android:id="@+id/exerciseButton5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxHeight="50dp"
+                android:maxWidth="50dp"
+                android:src="@drawable/thumbnailturkish" />
+
+            <TextView
+                android:id="@+id/exercise5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="30dp"
+                android:paddingTop="15dp"
+                android:text="Large Text"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/treturnButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/tableLayout1"
+        android:layout_marginTop="23dp"
+        android:text="Return to Menu" />
+
+</RelativeLayout>

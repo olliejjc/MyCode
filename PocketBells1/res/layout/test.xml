@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundlogo" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="53dp"
+        android:background="#D9ff8802"
+        android:text="ENTER WEIGHT"
+        android:gravity="center"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/editcurrentWeight"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="76dp"
+        android:background="#D9c7d7db"
+        android:ems="10"
+        android:hint="Enter Current Weight"
+        android:textColor="#ff8802"
+        android:inputType="numberDecimal"
+        android:textColorHint="#ff8802" />
+
+    <EditText
+        android:id="@+id/editTargetWeight"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editcurrentWeight"
+        android:layout_marginTop="24dp"
+        android:background="#D9c7d7db"
+        android:ems="10"
+        android:hint="Enter Target Weight"
+        android:inputType="numberDecimal"
+        android:textColor="#ff8802"
+        android:textColorHint="#ff8802" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/confirmweightbutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/editTargetWeight"
+        android:layout_marginTop="33dp"
+        android:text="Confirm" />
+
+</RelativeLayout>

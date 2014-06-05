@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+        <string-array name = "routines">
+        <item name = "kettlebell_swing">Kettlebell Swings</item>
+        <item name = "double_arm_swing">Double Arm Swings</item>
+        <item name = "snatches">Snatches</item>
+        <item name = "iron_cross_hold">Iron Cross Hold</item>
+        <item name = "jumping_jacks">Jumping Jacks</item>
+        <item name = "one_arm_floor_press">One Arm Floor Press</item>
+        <item name = "front_squat">Front Squat</item>
+        <item name = "halo_around_head">Halo Around Head</item>
+        <item name = "military_press">Military Press</item>
+        <item name = "high_pulls">High Pulls</item>
+        <item name = "straight_arm_extensions">Straight Arm Extensions</item>
+        <item name = "kettlebell_side_press">Kettlebell Side Press</item>
+        <item name = "kettlebell_sots_press">Kettlebell Sots Press</item>
+        <item name = "figure_eight_between_legs">Figure Eight Between Legs</item>
+        <item name = "windmill_lower_arm">Windmill Lower Arms</item>
+        <item name = "windmill_both_arms">Windmill Both Arms</item>
+        <item name = "turkish_get_up">Turkish Get Ups</item>
+        <item name = "russian_twists">Russian Twists</item>
+        <item name = "side_leans">Side Leans</item>
+        <item name = "standing_wood_chippers">Standing Wood Chippers</item>
+        <item name = "burpees">Burpees</item>
+        
+        
+    </string-array>
+</resources>

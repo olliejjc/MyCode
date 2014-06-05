@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:orientation="vertical"
+	android:background="@drawable/backgroundlogo"
+ >
+
+<TextView
+	android:id="@+id/timer"
+	android:layout_width="wrap_content"
+	android:layout_height="wrap_content"
+	android:layout_centerHorizontal="true"
+	android:layout_centerVertical="true"
+	android:paddingRight="10dip"
+	android:textSize="50dp"
+	android:textColor="#ff8802"
+	android:background="#D9c7d7db"/>
+
+<Button
+	android:id="@+id/button"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:layout_alignParentBottom="true"
+	android:layout_alignParentLeft="true"
+	android:text="Start"  
+	/>
+
+<TextView
+    android:id="@+id/routine"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_above="@+id/timer"
+    android:layout_centerHorizontal="true"
+    android:layout_marginBottom="85dp"
+    android:text="Large Text"
+    android:textAppearance="?android:attr/textAppearanceLarge"
+    android:background="#D9ff8802"
+    android:textColor="#ffffff"
+ />
+
+</RelativeLayout>

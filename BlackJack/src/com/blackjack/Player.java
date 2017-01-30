@@ -1,11 +1,13 @@
 package com.blackjack;
 
+import java.math.BigDecimal;
+
 public class Player {
 	private Hand hand;
 	private String name;
-	private double cash;
+	private BigDecimal cash;
 	
-	public Player(String name, double cash){
+	public Player(String name, BigDecimal cash){
 		this.name = name;
 		this.cash = cash;
 	}

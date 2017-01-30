@@ -1,20 +1,20 @@
 package com.blackjack;
 
 public class Card {
-	private Rank rank;
 	private Suit suit;
+	private Rank rank;
 	
-	public Card(Rank rank, Suit suit){
-		this.rank = rank;
+	public Card(Suit suit, Rank rank){
 		this.suit = suit;
-	}
-
-	public Rank getRank() {
-		return rank;
+		this.rank = rank;
 	}
 
 	public Suit getSuit() {
 		return suit;
+	}
+	
+	public Rank getRank() {
+		return rank;
 	}
 	
 	

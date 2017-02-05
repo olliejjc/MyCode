@@ -8,7 +8,7 @@ import java.util.Locale;
 public class CashHandler {
 
 	public static boolean isPlayerCashAmountValid(BigDecimal cash){
-		if(cash.doubleValue() >=5 && cash.doubleValue() <= 100 && (cash.doubleValue() * 100) % 5 == 0){
+		if(cash.doubleValue() >=5 && cash.doubleValue() <= 100 && (cash.doubleValue() * 100) % 50 == 0){
 			return true;
 		}
 		else{
@@ -22,5 +22,13 @@ public class CashHandler {
 		euroCostFormat.setMinimumFractionDigits(2);
 		euroCostFormat.setMaximumFractionDigits(2);
 		return euroCostFormat.format(displayCash.doubleValue());
+	}
+	
+	public static void removeLosingBetFromPlayerBalance(Player player){
+		player.setCash(player.getCash().subtract(player.getBet().getAmountBet()));
+	}
+	
+	public static void addWinningBetToPlayerBalance(Player player){
+		player.setCash(player.getCash().add(player.getBet().getAmountBet()));
 	}
 }

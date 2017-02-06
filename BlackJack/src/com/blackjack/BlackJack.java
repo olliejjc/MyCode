@@ -14,7 +14,7 @@ public class BlackJack {
 	private double bank = 1000;
 	private static Scanner sc = new Scanner(System.in);
 	private DecimalFormat df = new DecimalFormat("#.00");
-	private boolean playerWantsToPlay = true;
+	private boolean playerIsPlaying = true;
 	
 	public BlackJack(){
 		dealer = new Dealer();
@@ -46,7 +46,7 @@ public class BlackJack {
 	
 	public void handleBetting(){
 		Bet bet = new Bet();
-		bet.makeFirstBet();
+		bet.makeBet(player);
 		player.setBet(bet);
 	}
 	
@@ -103,26 +103,32 @@ public class BlackJack {
 		}
 		
 		System.out.println("The players current balance at the table is " + CashHandler.formatCurrencyForDisplay(player.getCash()));
-		System.out.println();
-		while(playerWantsToPlay){
-			System.out.print("Do you want to play again? Enter YES or NO: ");
-			String choice = sc.next();
-			if(choice.equalsIgnoreCase("YES")){
-				System.out.println();
-				break;
-			}
-			else if(choice.equalsIgnoreCase("NO")){
-				System.out.println("The game is over your final balance is " + CashHandler.formatCurrencyForDisplay(player.getCash()));
-				playerWantsToPlay = false;
-				break;
-			}
-			else{
-				System.out.println("You have not entered YES or NO please try again");
-				System.out.println();
-			}
+		if(CashHandler.isPlayerCashAmountValid(player.getCash())){
+			System.out.println();
+			while(playerIsPlaying){
+				System.out.print("Do you want to play again? Enter YES or NO: ");
+				String choice = sc.next();
+				if(choice.equalsIgnoreCase("YES")){
+					System.out.println();
+					break;
+				}
+				else if(choice.equalsIgnoreCase("NO")){
+					System.out.println("The game is over your final balance is " + CashHandler.formatCurrencyForDisplay(player.getCash()));
+					playerIsPlaying = false;
+					break;
+				}
+				else{
+					System.out.println("You have not entered YES or NO please try again");
+					System.out.println();
+				}
+			}	
 		}
-		
-		
+		else{
+			System.out.println();
+			System.out.println("The player does not have enough cash left to play");
+			System.out.println("GAME OVER");
+			playerIsPlaying = false;
+		}
 	}
 	
 	public String checkWhoWins(Player player, Dealer dealer){
@@ -139,7 +145,7 @@ public class BlackJack {
 		return winner;
 	}
 	
-	public boolean playerWantsToPlay() {
-		return playerWantsToPlay;
+	public boolean playerIsPlaying() {
+		return playerIsPlaying;
 	}
 }

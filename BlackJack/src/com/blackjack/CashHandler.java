@@ -7,8 +7,17 @@ import java.util.Locale;
 
 public class CashHandler {
 
-	public static boolean isPlayerCashAmountValid(BigDecimal cash){
+	public static boolean isPlayerCashDepositAmountValid(BigDecimal cash){
 		if(cash.doubleValue() >=5 && cash.doubleValue() <= 100 && (cash.doubleValue() * 100) % 50 == 0 && cash.doubleValue() >= 5){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
+	public static boolean isPlayerCurrentCashAmountValid(BigDecimal cash){
+		if(cash.doubleValue() >=5 && (cash.doubleValue() * 100) % 50 == 0){
 			return true;
 		}
 		else{

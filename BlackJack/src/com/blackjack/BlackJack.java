@@ -26,11 +26,11 @@ public class BlackJack {
 		while(true){
 			System.out.println();
 			System.out.println("Please enter the amount of cash you wish to sit down with (MIN is 5, MAX is 100)");
-			System.out.println("The cash must be in 50c intervals, e.g €50.00, €50.50, €51.00");
+			System.out.println("The cash must be in 50c intervals, e.g ï¿½50.00, ï¿½50.50, ï¿½51.00");
 			System.out.print("Enter your cash balance: ");
 			BigDecimal cash = sc.nextBigDecimal();
 			
-			if(CashHandler.isPlayerCashAmountValid(cash)){
+			if(CashHandler.isPlayerCashDepositAmountValid(cash)){
 				System.out.println();
 				System.out.println("The player " + name + " has sat down with " + CashHandler.formatCurrencyForDisplay(cash) + " balance");
 				player = new Player(name, cash);
@@ -103,7 +103,7 @@ public class BlackJack {
 		}
 		
 		System.out.println("The players current balance at the table is " + CashHandler.formatCurrencyForDisplay(player.getCash()));
-		if(CashHandler.isPlayerCashAmountValid(player.getCash())){
+		if(CashHandler.isPlayerCurrentCashAmountValid(player.getCash())){
 			System.out.println();
 			while(playerIsPlaying){
 				System.out.print("Do you want to play again? Enter YES or NO: ");

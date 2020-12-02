@@ -1,0 +1,56 @@
+{
+  "Carrefour": [
+    { "geography": [ "Europe", "Germany" ], "productLine": "Produce", "revenue": { "2022": 130143, "2021": 172122, "2020": 103716 } },
+    { "geography": [ "Europe", "France" ], "productLine": "Clothing", "revenue": { "2022": 85693, "2021": 91790, "2020": 77650 } },
+    { "geography": [ "Europe", "France" ], "productLine": "Electronics", "revenue": { "2022": 121987, "2021": 62435, "2020": 65834 } },
+    { "geography": [ "Europe", "Germany" ], "productLine": "Produce", "revenue": { "2022": 130143, "2021": 107447, "2020": 145543 } },
+    { "geography": [ "Europe", "Germany" ], "productLine": "Clothing", "revenue": { "2022": 77903, "2021": 97139, "2020": 110346 } },
+    { "geography": [ "Europe", "Germany" ], "productLine": "Electronics", "revenue": { "2022": 110897, "2021": 155282, "2020": 128696 } },
+    { "geography": [ "South America", "Brazil" ], "productLine": "Clothing", "revenue": { "2022": 66217, "2021": 55798, "2020": 66643 } },
+    { "geography": [ "South America", "Brazil" ], "productLine": "Electronics", "revenue": { "2022": 94262, "2021": 100560, "2020": 56272 } }
+  ],
+  "Tesco": [
+    { "geography": [ "Europe", "United Kingdom" ], "productLine": "Produce", "revenue": { "2022": 281110, "2021": 242965, "2020": 221863 } },
+    { "geography": [ "Europe", "United Kingdom" ], "productLine": "Clothing", "revenue": { "2022": 168270, "2021": 121161, "2020": 60919 } },
+    { "geography": [ "Europe", "United Kingdom" ], "productLine": "Electronics", "revenue": { "2022": 239537, "2021": 131959, "2020": 97047 } },
+    { "geography": [ "Europe", "Ireland" ], "productLine": "Produce", "revenue": { "2022": 74963, "2021": 43406, "2020": 54623 } },
+    { "geography": [ "Europe", "Ireland" ], "productLine": "Clothing", "revenue": { "2022": 44872, "2021": 24797, "2020": 16010 } },
+    { "geography": [ "Europe", "Ireland" ], "productLine": "Electronics", "revenue": { "2022": 63877, "2021": 94185, "2020": 87098 } }
+  ],
+  "Aldi": [
+    { "geography": [ "Europe", "Germany" ], "productLine": "Produce", "revenue": { "2022": 93703, "2021": 78561, "2020": 98263 } },
+    { "geography": [ "Europe", "Germany" ], "productLine": "Electronics", "revenue": { "2022": 79846, "2021": 65186, "2020": 43992 } },
+    { "geography": [ "Europe", "France" ], "productLine": "Produce", "revenue": { "2022": 103074, "2021": 135999, "2020": 170767 } },
+    { "geography": [ "Europe", "France" ], "productLine": "Electronics", "revenue": { "2022": 87830, "2021": 63256, "2020": 51243 } },
+    { "geography": [ "Europe", "United Kingdom" ], "productLine": "Produce", "revenue": { "2022": 140555, "2021": 156408, "2020": 182786 } },
+    { "geography": [ "Europe", "United Kingdom" ], "productLine": "Electronics", "revenue": { "2022": 119769, "2021": 130496, "2020": 113840 } },
+    { "geography": [ "Europe", "Ireland" ], "productLine": "Produce", "revenue": { "2022": 37481, "2021": 20086, "2020": 23567 } },
+    { "geography": [ "Europe", "Ireland" ], "productLine": "Electronics", "revenue": { "2022": 31938, "2021": 45529, "2020": 52660 } }
+  ],
+  "Sainsbury": [
+    { "geography": [ "Europe", "United Kingdom" ], "productLine": "Produce", "revenue": { "2022": 187406, "2021": 223630, "2020": 170224 } },
+    { "geography": [ "Europe", "United Kingdom" ], "productLine": "Clothing", "revenue": { "2022": 112180, "2021": 123777, "2020": 145874 } },
+    { "geography": [ "Europe", "United Kingdom" ], "productLine": "Electronics", "revenue": { "2022": 159691, "2021": 87708, "2020": 54269 } }
+  ],
+  "Walmart": [
+    { "geography": [ "North America", "United States of America" ], "productLine": "Produce", "revenue": { "2022": 524738, "2021": 712660, "2020": 415481 } },
+    { "geography": [ "North America", "United States of America" ], "productLine": "Clothing", "revenue": { "2022": 314104, "2021": 319413, "2020": 200769 } },
+    { "geography": [ "North America", "United States of America" ], "productLine": "Electronics", "revenue": { "2022": 447136, "2021": 493472, "2020": 676051 } },
+    { "geography": [ "North America", "Canada" ], "productLine": "Produce", "revenue": { "2022": 249875, "2021": 170231, "2020": 140683 } },
+    { "geography": [ "North America", "Canada" ], "productLine": "Clothing", "revenue": { "2022": 149573, "2021": 184483, "2020": 104167 } },
+    { "geography": [ "North America", "Canada" ], "productLine": "Electronics", "revenue": { "2022": 212922, "2021": 283183, "2020": 227948 } }
+  ],
+  "Costco": [
+    { "geography": [ "North America", "United States of America" ], "productLine": "Produce", "revenue": { "2022": 174913, "2021": 149793, "2020": 144744 } },
+    { "geography": [ "North America", "United States of America" ], "productLine": "Clothing", "revenue": { "2022": 104701, "2021": 150873, "2020": 200057 } },
+    { "geography": [ "North America", "United States of America" ], "productLine": "Electronics", "revenue": { "2022": 149045, "2021": 217582, "2020": 165144 } }
+  ],
+  "Shoprite": [
+    { "geography": [ "Africa", "Namibia" ], "productLine": "Clothing", "revenue": { "2022": 17450, "2021": 10465, "2020": 8161 } },
+    { "geography": [ "Africa", "Namibia" ], "productLine": "Electronics", "revenue": { "2022": 24841, "2021": 18308, "2020": 12278 } },
+    { "geography": [ "Africa", "Zambia" ], "productLine": "Clothing", "revenue": { "2022": 26175, "2021": 24294, "2020": 17862 } },
+    { "geography": [ "Africa", "Zambia" ], "productLine": "Electronics", "revenue": { "2022": 37261, "2021": 40854, "2020": 30042 } },
+    { "geography": [ "Africa", "Tanzania" ], "productLine": "Clothing", "revenue": { "2022": 30538, "2021": 41727, "2020": 45158 } },
+    { "geography": [ "Africa", "Tanzania" ], "productLine": "Electronics", "revenue": { "2022": 43472, "2021": 59854, "2020": 43286 } }
+  ]
+}

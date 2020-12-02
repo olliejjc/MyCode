@@ -1,0 +1,873 @@
+
+================================================================================
+================================================================================
+
+This log file is located at:
+
+    C:\laragon\www\tradingportfoliotracker\resources\IBC\Logs\IBC-3.8.4-beta.1_GATEWAY-980_FRIDAY.txt
+
+
+================================================================================
+
+Starting IBC version 3.8.4-beta.1 on 16/10/2020 at 20:13:45.08
+
+Operating system:  Microsoft Windows 10 Pro  64-bit          10.0.18363  
+
+Arguments:
+
+TWS version = 980
+Entry point = ibcalpha.ibc.IbcGateway
+/TwsPath = C:\Jts
+/TwsSettingsPath = 
+/IbcPath = C:\laragon\www\tradingportfoliotracker\resources\IBC
+/Config = C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini
+/Mode = 
+/JavaPath = 
+/User = ***
+/PW = ***
+/FIXUser =
+/FIXPW =
+
+=================================
+
+Generating the classpath
+Classpath=C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar
+
+Generating the JAVA VM options
+Java VM Options= -Xmx768m -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=20 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70 -Dinstaller.uuid=760b9c0a-de7d-4f88-8987-499f666f81a5 -DvmOptionsPath=C:\Jts\980\tws.vmoptions -Dsun.awt.nopixfmt=true -Dsun.java2d.noddraw=true -Dswing.boldMetal=false -Dsun.locale.formatasdefault=true
+
+Determining the location of java.exe 
+Location of java.exe=c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin
+
+Starting IBC with this command:
+"c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin\java.exe" -cp  "C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar"  -Xmx768m -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=20 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70 -Dinstaller.uuid=760b9c0a-de7d-4f88-8987-499f666f81a5 -DvmOptionsPath=C:\Jts\980\tws.vmoptions -Dsun.awt.nopixfmt=true -Dsun.java2d.noddraw=true -Dswing.boldMetal=false -Dsun.locale.formatasdefault=true ibcalpha.ibc.IbcGateway "C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini" "***" "***" 
+
+IBC Settings:
+    AcceptIncomingConnectionAction=manual
+    AcceptNonBrokerageAccountWarning=no
+    AllowBlindTrading=no
+    BindAddress=
+    ClosedownAt=
+    CommandPrompt=
+    ControlFrom=
+    DismissNSEComplianceNotice=yes
+    DismissPasswordExpiryWarning=no
+    ExistingSessionDetectedAction=manual
+    ExitAfterSecondFactorAuthenticationTimeout=no
+    FIX=no
+    FIXLoginId=***
+    FIXPassword=***
+    IbAutoClosedown=yes
+    IbDir=
+    IbLoginId=***
+    IbPassword=***
+    LogComponents=never
+    MinimizeMainWindow=no
+    OverrideTwsApiPort=
+    ReadOnlyApi=
+    ReadOnlyLogin=no
+    SaveTwsSettingsAt=
+    SecondFactorAuthenticationExitInterval=
+    ShowAllTrades=no
+    StoreSettingsOnServer=
+    SuppressInfoMessages=yes
+    TradingMode=live
+End IBC Settings
+
+2020-10-16 20:13:45:650 IBC: Version: 3.8.4-beta.1
+System Properties
+------------------------------------------------------------
+swing.boldMetal = false
+java.runtime.name = Java(TM) SE Runtime Environment
+sun.boot.library.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin
+java.vm.version = 25.152-b16
+sun.awt.nopixfmt = true
+vmOptionsPath = C:\Jts\980\tws.vmoptions
+java.vm.vendor = Oracle Corporation
+java.vendor.url = http://java.oracle.com/
+path.separator = ;
+java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg = sun.io
+user.country = IE
+user.script = 
+sun.java.launcher = SUN_STANDARD
+sun.os.patch.level = 
+java.vm.specification.name = Java Virtual Machine Specification
+user.dir = C:\Jts
+java.runtime.version = 1.8.0_152-b16
+java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\endorsed
+os.arch = amd64
+java.io.tmpdir = C:\Users\ollie\AppData\Local\Temp\
+line.separator = 
+
+java.vm.specification.vendor = Oracle Corporation
+user.variant = 
+os.name = Windows 10
+sun.java2d.noddraw = true
+sun.jnu.encoding = Cp1252
+java.library.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\AdoptOpenJDK\jdk-13.0.1.9-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Android;C:\Users\ollie\Downloads\curl-7.54.0;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\laragon\bin\php\php-7.4.7-Win32-vc15-x64;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\WINDOWS\System32\Wbem;C:\laragon\bin;C:\laragon\bin\apache\httpd-2.4.35-win64-VC15\bin;C:\laragon\bin\composer;C:\laragon\bin\git\bin;C:\laragon\bin\git\cmd;C:\laragon\bin\git\mingw64\bin;C:\laragon\bin\git\usr\bin;C:\laragon\bin\laragon\utils;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\laragon\bin\nginx\nginx-1.16.0;C:\laragon\bin\ngrok;C:\laragon\bin\nodejs\node-v12;C:\laragon\bin\notepad++;C:\laragon\bin\php\php-7.4.7-Win32-vc15-x64;C:\laragon\bin\putty;C:\laragon\bin\redis\redis-x64-3.2.100;C:\laragon\bin\telnet;C:\laragon\usr\bin;C:\Users\ollie\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\ollie\AppData\Roaming\Composer\vendor\bin;C:\Users\ollie\AppData\Roaming\npm;C:\Users\ollie\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\ollie\AppData\Local\Programs\Python\Python35\;C:\Users\ollie\AppData\Local\Microsoft\WindowsApps;C:\Users\ollie\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\System32\Wbem;;.
+java.specification.name = Java Platform API Specification
+java.class.version = 52.0
+sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+os.version = 10.0
+user.home = C:\Users\ollie
+user.timezone = Europe/London
+installer.uuid = 760b9c0a-de7d-4f88-8987-499f666f81a5
+java.awt.printerjob = sun.awt.windows.WPrinterJob
+file.encoding = Cp1252
+java.specification.version = 1.8
+java.class.path = C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar
+user.name = ollie
+java.vm.specification.version = 1.8
+sun.java.command = ibcalpha.ibc.IbcGateway C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini crows241 Timesplitters234
+java.home = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64
+sun.arch.data.model = 64
+user.language = en
+java.specification.vendor = Oracle Corporation
+awt.toolkit = sun.awt.windows.WToolkit
+java.vm.info = mixed mode
+java.version = 1.8.0_152
+java.ext.dirs = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+sun.boot.class.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\resources.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\rt.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\sunrsasign.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jsse.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jce.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\charsets.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jfr.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\classes
+java.vendor = Oracle Corporation
+file.separator = \
+java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding = UnicodeLittle
+sun.cpu.endian = little
+sun.desktop = windows
+sun.locale.formatasdefault = true
+sun.cpu.isalist = amd64
+------------------------------------------------------------
+2020-10-16 20:13:45:654 IBC: Using default settings provider: ini file is C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini
+2020-10-16 20:13:45:654 IBC: Using default login manager: getting username and password from args
+2020-10-16 20:13:45:654 IBC: Using default main window manager: constructor parameter isGateway=true
+2020-10-16 20:13:45:655 IBC: Using default trading mode manager: constructor parameter args but trading mode not present - will be taken from settings
+2020-10-16 20:13:45:655 IBC: Using default config dialog manager
+2020-10-16 20:13:45:663 IBC: CommandServer is not started because the port is not configured
+2020-10-16 20:13:45:753 IBC: TWS Settings directory is: C:\Jts
+2020-10-16 20:13:45:759 IBC: Ensuring C:\Jts\jts.ini contains required minimal lines
+2020-10-16 20:13:45:760 IBC: Found setting: [Logon]/s3store=true
+2020-10-16 20:13:45:760 IBC: Found setting: [Logon]/Locale=en
+2020-10-16 20:13:45:760 IBC: Found setting: [Logon]/displayedproxymsg=1
+2020-10-16 20:13:45:760 IBC: Found setting: [IBGateway]/ApiOnly=true
+2020-10-16 20:13:45:760 IBC: Confirmed C:\Jts\jts.ini contains required minimal lines
+2020-10-16 20:13:45:760 IBC: Starting session: will exit if login dialog is not displayed within 30 seconds
+2020-10-16 20:13:49:299 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Activated
+2020-10-16 20:13:49:300 IBC: Trading mode from settings: tradingMode=live
+2020-10-16 20:13:49:300 IBC: Setting Trading mode = live
+2020-10-16 20:13:49:408 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Focused
+2020-10-16 20:13:49:408 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Opened
+2020-10-16 20:13:49:430 IBC: Click button: Log In
+2020-10-16 20:13:50:087 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Lost focus
+2020-10-16 20:13:50:090 IBC: Detected frame entitled: Loading...; event=Activated
+2020-10-16 20:13:50:092 IBC: Detected frame entitled: Loading...; event=Focused
+2020-10-16 20:13:50:092 IBC: Detected frame entitled: Loading...; event=Opened
+2020-10-16 20:13:50:480 IBC: Detected frame entitled: Loading...; event=Lost focus
+2020-10-16 20:13:50:481 IBC: Detected frame entitled: Authenticating...; event=Activated
+2020-10-16 20:13:50:483 IBC: Detected frame entitled: Authenticating...; event=Focused
+2020-10-16 20:13:50:495 IBC: Detected frame entitled: Authenticating...; event=Opened
+2020-10-16 20:13:51:007 IBC: Detected frame entitled: Authenticating...; event=Lost focus
+2020-10-16 20:13:51:007 IBC: Second Factor Authentication dialog event: Activated
+2020-10-16 20:13:51:007 IBC: Second Factor Authentication dialog event: Focused
+2020-10-16 20:13:51:008 IBC: Second Factor Authentication dialog event: Opened
+2020-10-16 20:13:51:008 IBC: Second Factor Authentication dialog opened
+2020-10-16 20:13:51:008 IBC: Second Factor Authentication initiated
+2020-10-16 20:14:11:826 IBC: Second Factor Authentication dialog event: Lost focus
+2020-10-16 20:14:11:827 IBC: Detected frame entitled: Authenticating...; event=Activated
+2020-10-16 20:14:11:827 IBC: Detected frame entitled: Authenticating...; event=Focused
+2020-10-16 20:14:11:828 IBC: Second Factor Authentication dialog event: Closed
+2020-10-16 20:14:11:828 IBC: Second Factor Authentication dialog closed
+2020-10-16 20:14:11:828 IBC: ExitAfterSecondFactorAuthenticationTimeout is set to 'no'
+2020-10-16 20:14:11:838 IBC: Detected frame entitled: Authenticating...; event=Lost focus
+2020-10-16 20:14:11:838 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Activated
+2020-10-16 20:14:11:839 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Focused
+2020-10-16 20:14:13:497 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Closing
+2020-10-16 20:14:13:511 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Lost focus
+2020-10-16 20:14:13:511 IBC: Detected frame entitled: Loading...; event=Activated
+2020-10-16 20:14:13:512 IBC: Detected frame entitled: Loading...; event=Focused
+2020-10-16 20:14:13:512 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Closed
+
+Gateway finished at 16/10/2020 20:14:13.71
+
+IBC running GATEWAY 980 has finished at 16/10/2020 20:14:13.72
+
+
+================================================================================
+================================================================================
+
+This log file is located at:
+
+    C:\laragon\www\tradingportfoliotracker\resources\IBC\Logs\IBC-3.8.4-beta.1_GATEWAY-980_FRIDAY.txt
+
+
+================================================================================
+
+Starting IBC version 3.8.4-beta.1 on 16/10/2020 at 20:14:32.88
+
+Operating system:  Microsoft Windows 10 Pro  64-bit          10.0.18363  
+
+Arguments:
+
+TWS version = 980
+Entry point = ibcalpha.ibc.IbcGateway
+/TwsPath = C:\Jts
+/TwsSettingsPath = 
+/IbcPath = C:\laragon\www\tradingportfoliotracker\resources\IBC
+/Config = C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini
+/Mode = 
+/JavaPath = 
+/User = ***
+/PW = ***
+/FIXUser =
+/FIXPW =
+
+=================================
+
+Generating the classpath
+Classpath=C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar
+
+Generating the JAVA VM options
+Java VM Options= -Xmx768m -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=20 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70 -Dinstaller.uuid=760b9c0a-de7d-4f88-8987-499f666f81a5 -DvmOptionsPath=C:\Jts\980\tws.vmoptions -Dsun.awt.nopixfmt=true -Dsun.java2d.noddraw=true -Dswing.boldMetal=false -Dsun.locale.formatasdefault=true
+
+Determining the location of java.exe 
+Location of java.exe=c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin
+
+Starting IBC with this command:
+"c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin\java.exe" -cp  "C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar"  -Xmx768m -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=20 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70 -Dinstaller.uuid=760b9c0a-de7d-4f88-8987-499f666f81a5 -DvmOptionsPath=C:\Jts\980\tws.vmoptions -Dsun.awt.nopixfmt=true -Dsun.java2d.noddraw=true -Dswing.boldMetal=false -Dsun.locale.formatasdefault=true ibcalpha.ibc.IbcGateway "C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini" "***" "***" 
+
+IBC Settings:
+    AcceptIncomingConnectionAction=manual
+    AcceptNonBrokerageAccountWarning=no
+    AllowBlindTrading=no
+    BindAddress=
+    ClosedownAt=
+    CommandPrompt=
+    ControlFrom=
+    DismissNSEComplianceNotice=yes
+    DismissPasswordExpiryWarning=no
+    ExistingSessionDetectedAction=manual
+    ExitAfterSecondFactorAuthenticationTimeout=no
+    FIX=no
+    FIXLoginId=***
+    FIXPassword=***
+    IbAutoClosedown=yes
+    IbDir=
+    IbLoginId=***
+    IbPassword=***
+    LogComponents=never
+    MinimizeMainWindow=no
+    OverrideTwsApiPort=
+    ReadOnlyApi=
+    ReadOnlyLogin=no
+    SaveTwsSettingsAt=
+    SecondFactorAuthenticationExitInterval=
+    ShowAllTrades=no
+    StoreSettingsOnServer=
+    SuppressInfoMessages=yes
+    TradingMode=live
+End IBC Settings
+
+2020-10-16 20:14:33:196 IBC: Version: 3.8.4-beta.1
+System Properties
+------------------------------------------------------------
+swing.boldMetal = false
+java.runtime.name = Java(TM) SE Runtime Environment
+sun.boot.library.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin
+java.vm.version = 25.152-b16
+sun.awt.nopixfmt = true
+vmOptionsPath = C:\Jts\980\tws.vmoptions
+java.vm.vendor = Oracle Corporation
+java.vendor.url = http://java.oracle.com/
+path.separator = ;
+java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg = sun.io
+user.country = IE
+user.script = 
+sun.java.launcher = SUN_STANDARD
+sun.os.patch.level = 
+java.vm.specification.name = Java Virtual Machine Specification
+user.dir = C:\Jts
+java.runtime.version = 1.8.0_152-b16
+java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\endorsed
+os.arch = amd64
+java.io.tmpdir = C:\Users\ollie\AppData\Local\Temp\
+line.separator = 
+
+java.vm.specification.vendor = Oracle Corporation
+user.variant = 
+os.name = Windows 10
+sun.java2d.noddraw = true
+sun.jnu.encoding = Cp1252
+java.library.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\AdoptOpenJDK\jdk-13.0.1.9-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Android;C:\Users\ollie\Downloads\curl-7.54.0;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\laragon\bin\php\php-7.4.7-Win32-vc15-x64;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\WINDOWS\System32\Wbem;C:\laragon\bin;C:\laragon\bin\apache\httpd-2.4.35-win64-VC15\bin;C:\laragon\bin\composer;C:\laragon\bin\git\bin;C:\laragon\bin\git\cmd;C:\laragon\bin\git\mingw64\bin;C:\laragon\bin\git\usr\bin;C:\laragon\bin\laragon\utils;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\laragon\bin\nginx\nginx-1.16.0;C:\laragon\bin\ngrok;C:\laragon\bin\nodejs\node-v12;C:\laragon\bin\notepad++;C:\laragon\bin\php\php-7.4.7-Win32-vc15-x64;C:\laragon\bin\putty;C:\laragon\bin\redis\redis-x64-3.2.100;C:\laragon\bin\telnet;C:\laragon\usr\bin;C:\Users\ollie\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\ollie\AppData\Roaming\Composer\vendor\bin;C:\Users\ollie\AppData\Roaming\npm;C:\Users\ollie\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\ollie\AppData\Local\Programs\Python\Python35\;C:\Users\ollie\AppData\Local\Microsoft\WindowsApps;C:\Users\ollie\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\System32\Wbem;;.
+java.specification.name = Java Platform API Specification
+java.class.version = 52.0
+sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+os.version = 10.0
+user.home = C:\Users\ollie
+user.timezone = Europe/London
+installer.uuid = 760b9c0a-de7d-4f88-8987-499f666f81a5
+java.awt.printerjob = sun.awt.windows.WPrinterJob
+file.encoding = Cp1252
+java.specification.version = 1.8
+java.class.path = C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar
+user.name = ollie
+java.vm.specification.version = 1.8
+sun.java.command = ibcalpha.ibc.IbcGateway C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini crows241 Timesplitters234
+java.home = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64
+sun.arch.data.model = 64
+user.language = en
+java.specification.vendor = Oracle Corporation
+awt.toolkit = sun.awt.windows.WToolkit
+java.vm.info = mixed mode
+java.version = 1.8.0_152
+java.ext.dirs = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+sun.boot.class.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\resources.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\rt.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\sunrsasign.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jsse.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jce.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\charsets.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jfr.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\classes
+java.vendor = Oracle Corporation
+file.separator = \
+java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding = UnicodeLittle
+sun.cpu.endian = little
+sun.desktop = windows
+sun.locale.formatasdefault = true
+sun.cpu.isalist = amd64
+------------------------------------------------------------
+2020-10-16 20:14:33:198 IBC: Using default settings provider: ini file is C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini
+2020-10-16 20:14:33:198 IBC: Using default login manager: getting username and password from args
+2020-10-16 20:14:33:198 IBC: Using default main window manager: constructor parameter isGateway=true
+2020-10-16 20:14:33:198 IBC: Using default trading mode manager: constructor parameter args but trading mode not present - will be taken from settings
+2020-10-16 20:14:33:199 IBC: Using default config dialog manager
+2020-10-16 20:14:33:207 IBC: CommandServer is not started because the port is not configured
+2020-10-16 20:14:33:296 IBC: TWS Settings directory is: C:\Jts
+2020-10-16 20:14:33:302 IBC: Ensuring C:\Jts\jts.ini contains required minimal lines
+2020-10-16 20:14:33:302 IBC: Found setting: [Logon]/s3store=true
+2020-10-16 20:14:33:302 IBC: Found setting: [Logon]/Locale=en
+2020-10-16 20:14:33:302 IBC: Found setting: [Logon]/displayedproxymsg=1
+2020-10-16 20:14:33:302 IBC: Found setting: [IBGateway]/ApiOnly=true
+2020-10-16 20:14:33:302 IBC: Confirmed C:\Jts\jts.ini contains required minimal lines
+2020-10-16 20:14:33:302 IBC: Starting session: will exit if login dialog is not displayed within 30 seconds
+2020-10-16 20:14:36:996 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Activated
+2020-10-16 20:14:36:997 IBC: Trading mode from settings: tradingMode=live
+2020-10-16 20:14:36:997 IBC: Setting Trading mode = live
+2020-10-16 20:14:37:098 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Focused
+2020-10-16 20:14:37:099 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Opened
+2020-10-16 20:14:37:115 IBC: Click button: Log In
+2020-10-16 20:14:37:891 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Lost focus
+2020-10-16 20:14:37:892 IBC: Detected frame entitled: Loading...; event=Activated
+2020-10-16 20:14:37:903 IBC: Detected frame entitled: Loading...; event=Focused
+2020-10-16 20:14:37:904 IBC: Detected frame entitled: Loading...; event=Opened
+2020-10-16 20:14:38:300 IBC: Detected frame entitled: Loading...; event=Lost focus
+2020-10-16 20:14:38:301 IBC: Detected frame entitled: Authenticating...; event=Activated
+2020-10-16 20:14:38:301 IBC: Detected frame entitled: Authenticating...; event=Focused
+2020-10-16 20:14:38:309 IBC: Detected frame entitled: Authenticating...; event=Opened
+2020-10-16 20:14:38:881 IBC: Detected frame entitled: Authenticating...; event=Lost focus
+2020-10-16 20:14:38:882 IBC: Second Factor Authentication dialog event: Activated
+2020-10-16 20:14:38:882 IBC: Second Factor Authentication dialog event: Focused
+2020-10-16 20:14:38:883 IBC: Second Factor Authentication dialog event: Opened
+2020-10-16 20:14:38:883 IBC: Second Factor Authentication dialog opened
+2020-10-16 20:14:38:883 IBC: Second Factor Authentication initiated
+2020-10-16 20:14:57:939 IBC: Second Factor Authentication dialog event: Lost focus
+2020-10-16 20:15:24:052 IBC: Second Factor Authentication dialog event: Activated
+2020-10-16 20:15:24:055 IBC: Second Factor Authentication dialog event: Focused
+2020-10-16 20:15:27:110 IBC: Second Factor Authentication dialog event: Lost focus
+2020-10-16 20:16:35:655 IBC: Second Factor Authentication dialog event: Activated
+2020-10-16 20:16:35:658 IBC: Second Factor Authentication dialog event: Focused
+2020-10-16 20:16:58:689 IBC: Second Factor Authentication dialog event: Lost focus
+2020-10-16 20:16:58:690 IBC: Detected frame entitled: Authenticating...; event=Activated
+2020-10-16 20:16:58:691 IBC: Detected frame entitled: Authenticating...; event=Focused
+2020-10-16 20:16:58:692 IBC: Second Factor Authentication dialog event: Closed
+2020-10-16 20:16:58:692 IBC: Second Factor Authentication dialog closed
+2020-10-16 20:16:58:692 IBC: ExitAfterSecondFactorAuthenticationTimeout is set to 'no'
+2020-10-16 20:16:58:702 IBC: Detected frame entitled: Authenticating...; event=Lost focus
+2020-10-16 20:16:58:703 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Activated
+2020-10-16 20:16:58:703 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Focused
+2020-10-16 20:17:00:336 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Closing
+2020-10-16 20:17:00:381 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Lost focus
+2020-10-16 20:17:00:382 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Closed
+
+Gateway finished at 16/10/2020 20:17:00.58
+
+IBC running GATEWAY 980 has finished at 16/10/2020 20:17:00.59
+
+
+================================================================================
+================================================================================
+
+This log file is located at:
+
+    C:\laragon\www\tradingportfoliotracker\resources\IBC\Logs\IBC-3.8.4-beta.1_GATEWAY-980_FRIDAY.txt
+
+
+================================================================================
+
+Starting IBC version 3.8.4-beta.1 on 16/10/2020 at 20:17:16.00
+
+Operating system:  Microsoft Windows 10 Pro  64-bit          10.0.18363  
+
+Arguments:
+
+TWS version = 980
+Entry point = ibcalpha.ibc.IbcGateway
+/TwsPath = C:\Jts
+/TwsSettingsPath = 
+/IbcPath = C:\laragon\www\tradingportfoliotracker\resources\IBC
+/Config = C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini
+/Mode = 
+/JavaPath = 
+/User = ***
+/PW = ***
+/FIXUser =
+/FIXPW =
+
+=================================
+
+Generating the classpath
+Classpath=C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar
+
+Generating the JAVA VM options
+Java VM Options= -Xmx768m -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=20 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70 -Dinstaller.uuid=760b9c0a-de7d-4f88-8987-499f666f81a5 -DvmOptionsPath=C:\Jts\980\tws.vmoptions -Dsun.awt.nopixfmt=true -Dsun.java2d.noddraw=true -Dswing.boldMetal=false -Dsun.locale.formatasdefault=true
+
+Determining the location of java.exe 
+Location of java.exe=c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin
+
+Starting IBC with this command:
+"c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin\java.exe" -cp  "C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar"  -Xmx768m -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=20 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70 -Dinstaller.uuid=760b9c0a-de7d-4f88-8987-499f666f81a5 -DvmOptionsPath=C:\Jts\980\tws.vmoptions -Dsun.awt.nopixfmt=true -Dsun.java2d.noddraw=true -Dswing.boldMetal=false -Dsun.locale.formatasdefault=true ibcalpha.ibc.IbcGateway "C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini" "***" "***" 
+
+IBC Settings:
+    AcceptIncomingConnectionAction=manual
+    AcceptNonBrokerageAccountWarning=no
+    AllowBlindTrading=no
+    BindAddress=
+    ClosedownAt=
+    CommandPrompt=
+    ControlFrom=
+    DismissNSEComplianceNotice=yes
+    DismissPasswordExpiryWarning=no
+    ExistingSessionDetectedAction=manual
+    ExitAfterSecondFactorAuthenticationTimeout=no
+    FIX=no
+    FIXLoginId=***
+    FIXPassword=***
+    IbAutoClosedown=yes
+    IbDir=
+    IbLoginId=***
+    IbPassword=***
+    LogComponents=never
+    MinimizeMainWindow=no
+    OverrideTwsApiPort=
+    ReadOnlyApi=
+    ReadOnlyLogin=no
+    SaveTwsSettingsAt=
+    SecondFactorAuthenticationExitInterval=
+    ShowAllTrades=no
+    StoreSettingsOnServer=
+    SuppressInfoMessages=yes
+    TradingMode=live
+End IBC Settings
+
+2020-10-16 20:17:16:311 IBC: Version: 3.8.4-beta.1
+System Properties
+------------------------------------------------------------
+swing.boldMetal = false
+java.runtime.name = Java(TM) SE Runtime Environment
+sun.boot.library.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin
+java.vm.version = 25.152-b16
+sun.awt.nopixfmt = true
+vmOptionsPath = C:\Jts\980\tws.vmoptions
+java.vm.vendor = Oracle Corporation
+java.vendor.url = http://java.oracle.com/
+path.separator = ;
+java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg = sun.io
+user.country = IE
+user.script = 
+sun.java.launcher = SUN_STANDARD
+sun.os.patch.level = 
+java.vm.specification.name = Java Virtual Machine Specification
+user.dir = C:\Jts
+java.runtime.version = 1.8.0_152-b16
+java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\endorsed
+os.arch = amd64
+java.io.tmpdir = C:\Users\ollie\AppData\Local\Temp\
+line.separator = 
+
+java.vm.specification.vendor = Oracle Corporation
+user.variant = 
+os.name = Windows 10
+sun.java2d.noddraw = true
+sun.jnu.encoding = Cp1252
+java.library.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\AdoptOpenJDK\jdk-13.0.1.9-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Android;C:\Users\ollie\Downloads\curl-7.54.0;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\laragon\bin\php\php-7.4.7-Win32-vc15-x64;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\WINDOWS\System32\Wbem;C:\laragon\bin;C:\laragon\bin\apache\httpd-2.4.35-win64-VC15\bin;C:\laragon\bin\composer;C:\laragon\bin\git\bin;C:\laragon\bin\git\cmd;C:\laragon\bin\git\mingw64\bin;C:\laragon\bin\git\usr\bin;C:\laragon\bin\laragon\utils;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\laragon\bin\nginx\nginx-1.16.0;C:\laragon\bin\ngrok;C:\laragon\bin\nodejs\node-v12;C:\laragon\bin\notepad++;C:\laragon\bin\php\php-7.4.7-Win32-vc15-x64;C:\laragon\bin\putty;C:\laragon\bin\redis\redis-x64-3.2.100;C:\laragon\bin\telnet;C:\laragon\usr\bin;C:\Users\ollie\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\ollie\AppData\Roaming\Composer\vendor\bin;C:\Users\ollie\AppData\Roaming\npm;C:\Users\ollie\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\ollie\AppData\Local\Programs\Python\Python35\;C:\Users\ollie\AppData\Local\Microsoft\WindowsApps;C:\Users\ollie\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\System32\Wbem;;.
+java.specification.name = Java Platform API Specification
+java.class.version = 52.0
+sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+os.version = 10.0
+user.home = C:\Users\ollie
+user.timezone = Europe/London
+installer.uuid = 760b9c0a-de7d-4f88-8987-499f666f81a5
+java.awt.printerjob = sun.awt.windows.WPrinterJob
+file.encoding = Cp1252
+java.specification.version = 1.8
+java.class.path = C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar
+user.name = ollie
+java.vm.specification.version = 1.8
+sun.java.command = ibcalpha.ibc.IbcGateway C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini crows241 Timesplitters234
+java.home = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64
+sun.arch.data.model = 64
+user.language = en
+java.specification.vendor = Oracle Corporation
+awt.toolkit = sun.awt.windows.WToolkit
+java.vm.info = mixed mode
+java.version = 1.8.0_152
+java.ext.dirs = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+sun.boot.class.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\resources.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\rt.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\sunrsasign.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jsse.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jce.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\charsets.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jfr.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\classes
+java.vendor = Oracle Corporation
+file.separator = \
+java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding = UnicodeLittle
+sun.cpu.endian = little
+sun.desktop = windows
+sun.locale.formatasdefault = true
+sun.cpu.isalist = amd64
+------------------------------------------------------------
+2020-10-16 20:17:16:313 IBC: Using default settings provider: ini file is C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini
+2020-10-16 20:17:16:313 IBC: Using default login manager: getting username and password from args
+2020-10-16 20:17:16:313 IBC: Using default main window manager: constructor parameter isGateway=true
+2020-10-16 20:17:16:313 IBC: Using default trading mode manager: constructor parameter args but trading mode not present - will be taken from settings
+2020-10-16 20:17:16:314 IBC: Using default config dialog manager
+2020-10-16 20:17:16:322 IBC: CommandServer is not started because the port is not configured
+2020-10-16 20:17:16:409 IBC: TWS Settings directory is: C:\Jts
+2020-10-16 20:17:16:415 IBC: Ensuring C:\Jts\jts.ini contains required minimal lines
+2020-10-16 20:17:16:415 IBC: Found setting: [Logon]/s3store=true
+2020-10-16 20:17:16:415 IBC: Found setting: [Logon]/Locale=en
+2020-10-16 20:17:16:415 IBC: Found setting: [Logon]/displayedproxymsg=1
+2020-10-16 20:17:16:415 IBC: Found setting: [IBGateway]/ApiOnly=true
+2020-10-16 20:17:16:415 IBC: Confirmed C:\Jts\jts.ini contains required minimal lines
+2020-10-16 20:17:16:415 IBC: Starting session: will exit if login dialog is not displayed within 30 seconds
+2020-10-16 20:17:19:909 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Activated
+2020-10-16 20:17:19:910 IBC: Trading mode from settings: tradingMode=live
+2020-10-16 20:17:19:910 IBC: Setting Trading mode = live
+2020-10-16 20:17:20:038 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Focused
+2020-10-16 20:17:20:039 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Opened
+2020-10-16 20:17:20:073 IBC: Click button: Log In
+2020-10-16 20:17:20:778 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Lost focus
+2020-10-16 20:17:20:783 IBC: Detected frame entitled: Loading...; event=Activated
+2020-10-16 20:17:20:784 IBC: Detected frame entitled: Loading...; event=Focused
+2020-10-16 20:17:20:785 IBC: Detected frame entitled: Loading...; event=Opened
+2020-10-16 20:17:21:078 IBC: Detected frame entitled: Loading...; event=Lost focus
+2020-10-16 20:17:21:079 IBC: Detected frame entitled: Authenticating (trying for another 19 seconds)...; event=Activated
+2020-10-16 20:17:21:079 IBC: Detected frame entitled: Authenticating (trying for another 19 seconds)...; event=Focused
+2020-10-16 20:17:21:088 IBC: Detected frame entitled: Authenticating (trying for another 19 seconds)...; event=Opened
+2020-10-16 20:17:21:589 IBC: Detected frame entitled: Authenticating (trying for another 19 seconds)...; event=Lost focus
+2020-10-16 20:17:21:589 IBC: Second Factor Authentication dialog event: Activated
+2020-10-16 20:17:21:589 IBC: Second Factor Authentication dialog event: Focused
+2020-10-16 20:17:21:590 IBC: Second Factor Authentication dialog event: Opened
+2020-10-16 20:17:21:590 IBC: Second Factor Authentication dialog opened
+2020-10-16 20:17:21:590 IBC: Second Factor Authentication initiated
+2020-10-16 20:17:28:615 IBC: Second Factor Authentication dialog event: Lost focus
+2020-10-16 20:17:28:615 IBC: Detected frame entitled: Authenticating (trying for another 19 seconds)...; event=Activated
+2020-10-16 20:17:28:615 IBC: Detected frame entitled: Authenticating (trying for another 19 seconds)...; event=Focused
+2020-10-16 20:17:28:620 IBC: Second Factor Authentication dialog event: Closed
+2020-10-16 20:17:28:620 IBC: Second Factor Authentication dialog closed
+2020-10-16 20:17:28:620 IBC: ExitAfterSecondFactorAuthenticationTimeout is set to 'no'
+LogModuleConfigurator-Init: Log4j Ver2.x found on classpath
+LogModuleConfigurator-Init: LogModuleConfigurator initialized with Log4j Verd.x
+2020-10-16 20:17:31:345 IBC: Detected frame entitled: Initializing environment...; event=Lost focus
+2020-10-16 20:17:31:347 IBC: Detected frame entitled: Initializing environment...; event=Focused
+2020-10-16 20:17:31:519 IBC: Detected frame entitled: Starting application...; event=Lost focus
+2020-10-16 20:17:31:519 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:17:31:519 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:17:31:521 IBC: Detected frame entitled: Starting application...; event=Closed
+2020-10-16 20:17:31:521 IBC: Login has completed
+2020-10-16 20:17:32:158 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:17:45:279 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:17:45:281 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:17:51:635 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:17:56:438 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:17:56:439 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:17:57:058 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:17:59:816 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:17:59:817 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:18:02:290 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:18:22:154 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:18:22:156 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:18:22:665 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:18:24:977 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:18:24:977 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:18:29:454 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:18:45:197 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:18:45:198 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:18:48:569 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:18:51:686 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:18:51:687 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:18:55:791 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:19:07:315 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:19:07:316 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:19:11:404 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:19:58:611 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:19:58:614 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:20:01:211 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:21:32:896 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:21:32:898 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:21:39:696 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:31:54:487 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:31:54:488 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:31:54:522 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:31:54:571 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:31:54:572 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:32:03:202 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:32:03:202 IBC: Detected dialog entitled: View Logs; event=Activated
+2020-10-16 20:32:03:203 IBC: Detected dialog entitled: View Logs; event=Focused
+2020-10-16 20:32:03:204 IBC: Detected dialog entitled: View Logs; event=Opened
+2020-10-16 20:32:05:558 IBC: Detected dialog entitled: View Logs; event=Lost focus
+2020-10-16 20:32:05:559 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:32:05:559 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:32:05:561 IBC: Detected dialog entitled: View Logs; event=Closed
+2020-10-16 20:32:12:688 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:34:33:043 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:34:33:043 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:34:33:061 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:34:33:105 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:34:33:106 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:34:42:049 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:34:44:704 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:34:44:705 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:34:47:682 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:37:13:812 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:37:13:813 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:37:15:321 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:37:57:940 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:37:57:942 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:38:00:025 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:38:48:067 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:38:48:069 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:38:50:479 IBC: Detected frame entitled: IB Gateway; event=Closing
+2020-10-16 20:38:50:602 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:38:50:606 IBC: Detected dialog entitled: Shutdown progress; event=Activated
+2020-10-16 20:38:50:606 IBC: Detected dialog entitled: Shutdown progress; event=Focused
+2020-10-16 20:38:50:607 IBC: Detected dialog entitled: Shutdown progress; event=Opened
+2020-10-16 20:38:51,229 JTS-ShutdownTask-Shutdown_IA-94 ERROR Attempted to append to non-started appender d
+2020-10-16 20:38:51,232 NIA-Input-Queue-2 ERROR Attempted to append to non-started appender d
+2020-10-16 20:38:51,233 NIA-Input-Queue-2 ERROR Attempted to append to non-started appender d
+2020-10-16 20:38:51,365 NIA-Input-Queue-2 ERROR Attempted to append to non-started appender d
+2020-10-16 20:38:51,394 pool-3-thread-1 ERROR Attempted to append to non-started appender f
+
+Gateway finished at 16/10/2020 20:38:51.93
+
+IBC running GATEWAY 980 has finished at 16/10/2020 20:38:51.95
+
+
+================================================================================
+================================================================================
+
+This log file is located at:
+
+    C:\laragon\www\tradingportfoliotracker\resources\IBC\Logs\IBC-3.8.4-beta.1_GATEWAY-980_FRIDAY.txt
+
+
+================================================================================
+
+Starting IBC version 3.8.4-beta.1 on 16/10/2020 at 20:39:53.56
+
+Operating system:  Microsoft Windows 10 Pro  64-bit          10.0.18363  
+
+Arguments:
+
+TWS version = 980
+Entry point = ibcalpha.ibc.IbcGateway
+/TwsPath = C:\Jts
+/TwsSettingsPath = 
+/IbcPath = C:\laragon\www\tradingportfoliotracker\resources\IBC
+/Config = C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini
+/Mode = 
+/JavaPath = 
+/User = ***
+/PW = ***
+/FIXUser =
+/FIXPW =
+
+=================================
+
+Generating the classpath
+Classpath=C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar
+
+Generating the JAVA VM options
+Java VM Options= -Xmx768m -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=20 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70 -Dinstaller.uuid=760b9c0a-de7d-4f88-8987-499f666f81a5 -DvmOptionsPath=C:\Jts\980\tws.vmoptions -Dsun.awt.nopixfmt=true -Dsun.java2d.noddraw=true -Dswing.boldMetal=false -Dsun.locale.formatasdefault=true
+
+Determining the location of java.exe 
+Location of java.exe=c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin
+
+Starting IBC with this command:
+"c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin\java.exe" -cp  "C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar"  -Xmx768m -XX:+UseG1GC -XX:MaxGCPauseMillis=200 -XX:ParallelGCThreads=20 -XX:ConcGCThreads=5 -XX:InitiatingHeapOccupancyPercent=70 -Dinstaller.uuid=760b9c0a-de7d-4f88-8987-499f666f81a5 -DvmOptionsPath=C:\Jts\980\tws.vmoptions -Dsun.awt.nopixfmt=true -Dsun.java2d.noddraw=true -Dswing.boldMetal=false -Dsun.locale.formatasdefault=true ibcalpha.ibc.IbcGateway "C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini" "***" "***" 
+
+IBC Settings:
+    AcceptIncomingConnectionAction=manual
+    AcceptNonBrokerageAccountWarning=no
+    AllowBlindTrading=no
+    BindAddress=
+    ClosedownAt=
+    CommandPrompt=
+    ControlFrom=
+    DismissNSEComplianceNotice=yes
+    DismissPasswordExpiryWarning=no
+    ExistingSessionDetectedAction=manual
+    ExitAfterSecondFactorAuthenticationTimeout=no
+    FIX=no
+    FIXLoginId=***
+    FIXPassword=***
+    IbAutoClosedown=yes
+    IbDir=
+    IbLoginId=***
+    IbPassword=***
+    LogComponents=never
+    MinimizeMainWindow=no
+    OverrideTwsApiPort=
+    ReadOnlyApi=
+    ReadOnlyLogin=no
+    SaveTwsSettingsAt=
+    SecondFactorAuthenticationExitInterval=
+    ShowAllTrades=no
+    StoreSettingsOnServer=
+    SuppressInfoMessages=yes
+    TradingMode=live
+End IBC Settings
+
+2020-10-16 20:39:53:852 IBC: Version: 3.8.4-beta.1
+System Properties
+------------------------------------------------------------
+swing.boldMetal = false
+java.runtime.name = Java(TM) SE Runtime Environment
+sun.boot.library.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin
+java.vm.version = 25.152-b16
+sun.awt.nopixfmt = true
+vmOptionsPath = C:\Jts\980\tws.vmoptions
+java.vm.vendor = Oracle Corporation
+java.vendor.url = http://java.oracle.com/
+path.separator = ;
+java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+file.encoding.pkg = sun.io
+user.country = IE
+user.script = 
+sun.java.launcher = SUN_STANDARD
+sun.os.patch.level = 
+java.vm.specification.name = Java Virtual Machine Specification
+user.dir = C:\Jts
+java.runtime.version = 1.8.0_152-b16
+java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+java.endorsed.dirs = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\endorsed
+os.arch = amd64
+java.io.tmpdir = C:\Users\ollie\AppData\Local\Temp\
+line.separator = 
+
+java.vm.specification.vendor = Oracle Corporation
+user.variant = 
+os.name = Windows 10
+sun.java2d.noddraw = true
+sun.jnu.encoding = Cp1252
+java.library.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files\AdoptOpenJDK\jdk-13.0.1.9-hotspot\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Razer Chroma SDK\bin;C:\Program Files\Razer Chroma SDK\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\system32\config\systemprofile\AppData\Local\Microsoft\WindowsApps;C:\Android;C:\Users\ollie\Downloads\curl-7.54.0;C:\Program Files\Git\cmd;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\laragon\bin\php\php-7.4.7-Win32-vc15-x64;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\WINDOWS\System32\Wbem;C:\laragon\bin;C:\laragon\bin\apache\httpd-2.4.35-win64-VC15\bin;C:\laragon\bin\composer;C:\laragon\bin\git\bin;C:\laragon\bin\git\cmd;C:\laragon\bin\git\mingw64\bin;C:\laragon\bin\git\usr\bin;C:\laragon\bin\laragon\utils;C:\laragon\bin\mysql\mysql-5.7.24-winx64\bin;C:\laragon\bin\nginx\nginx-1.16.0;C:\laragon\bin\ngrok;C:\laragon\bin\nodejs\node-v12;C:\laragon\bin\notepad++;C:\laragon\bin\php\php-7.4.7-Win32-vc15-x64;C:\laragon\bin\putty;C:\laragon\bin\redis\redis-x64-3.2.100;C:\laragon\bin\telnet;C:\laragon\usr\bin;C:\Users\ollie\AppData\Local\Yarn\config\global\node_modules\.bin;C:\Users\ollie\AppData\Roaming\Composer\vendor\bin;C:\Users\ollie\AppData\Roaming\npm;C:\Users\ollie\AppData\Local\Programs\Python\Python35\Scripts\;C:\Users\ollie\AppData\Local\Programs\Python\Python35\;C:\Users\ollie\AppData\Local\Microsoft\WindowsApps;C:\Users\ollie\AppData\Local\Programs\Microsoft VS Code\bin;C:\WINDOWS\System32\Wbem;;.
+java.specification.name = Java Platform API Specification
+java.class.version = 52.0
+sun.management.compiler = HotSpot 64-Bit Tiered Compilers
+os.version = 10.0
+user.home = C:\Users\ollie
+user.timezone = Europe/London
+installer.uuid = 760b9c0a-de7d-4f88-8987-499f666f81a5
+java.awt.printerjob = sun.awt.windows.WPrinterJob
+file.encoding = Cp1252
+java.specification.version = 1.8
+java.class.path = C:\Jts\980\jars\jts4launch-980.jar;C:\Jts\980\jars\jxbrowser-7.5.jar;C:\Jts\980\jars\jxbrowser-swing-7.5.jar;C:\Jts\980\jars\jxbrowser-win64-7.5.jar;C:\Jts\980\jars\locales.jar;C:\Jts\980\jars\log4j-api-2.12.0.jar;C:\Jts\980\jars\log4j-core-2.12.0.jar;C:\Jts\980\jars\total-2020.jar;C:\Jts\980\jars\twslaunch-980.jar;C:\Jts\980\jars\twslaunch-install4j-1.10.jar;C:\laragon\www\tradingportfoliotracker\resources\IBC\IBC.jar
+user.name = ollie
+java.vm.specification.version = 1.8
+sun.java.command = ibcalpha.ibc.IbcGateway C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini crows241 Timesplitters234
+java.home = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64
+sun.arch.data.model = 64
+user.language = en
+java.specification.vendor = Oracle Corporation
+awt.toolkit = sun.awt.windows.WToolkit
+java.vm.info = mixed mode
+java.version = 1.8.0_152
+java.ext.dirs = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+sun.boot.class.path = c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\resources.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\rt.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\sunrsasign.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jsse.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jce.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\charsets.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\lib\jfr.jar;c:\users\ollie\.i4j_jres\1.8.0_152-tzdata2019c_64\classes
+java.vendor = Oracle Corporation
+file.separator = \
+java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+sun.io.unicode.encoding = UnicodeLittle
+sun.cpu.endian = little
+sun.desktop = windows
+sun.locale.formatasdefault = true
+sun.cpu.isalist = amd64
+------------------------------------------------------------
+2020-10-16 20:39:53:854 IBC: Using default settings provider: ini file is C:\laragon\www\tradingportfoliotracker\resources\IBC\config.ini
+2020-10-16 20:39:53:854 IBC: Using default login manager: getting username and password from args
+2020-10-16 20:39:53:854 IBC: Using default main window manager: constructor parameter isGateway=true
+2020-10-16 20:39:53:854 IBC: Using default trading mode manager: constructor parameter args but trading mode not present - will be taken from settings
+2020-10-16 20:39:53:855 IBC: Using default config dialog manager
+2020-10-16 20:39:53:862 IBC: CommandServer is not started because the port is not configured
+2020-10-16 20:39:53:948 IBC: TWS Settings directory is: C:\Jts
+2020-10-16 20:39:53:954 IBC: Ensuring C:\Jts\jts.ini contains required minimal lines
+2020-10-16 20:39:53:954 IBC: Found setting: [Logon]/s3store=true
+2020-10-16 20:39:53:954 IBC: Found setting: [Logon]/Locale=en
+2020-10-16 20:39:53:954 IBC: Found setting: [Logon]/displayedproxymsg=1
+2020-10-16 20:39:53:954 IBC: Found setting: [IBGateway]/ApiOnly=true
+2020-10-16 20:39:53:954 IBC: Confirmed C:\Jts\jts.ini contains required minimal lines
+2020-10-16 20:39:53:955 IBC: Starting session: will exit if login dialog is not displayed within 30 seconds
+2020-10-16 20:39:56:977 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Activated
+2020-10-16 20:39:56:978 IBC: Trading mode from settings: tradingMode=live
+2020-10-16 20:39:56:978 IBC: Setting Trading mode = live
+2020-10-16 20:39:57:086 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Focused
+2020-10-16 20:39:57:088 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Opened
+2020-10-16 20:39:57:109 IBC: Click button: Log In
+2020-10-16 20:39:57:746 IBC: Detected frame entitled: Interactive Brokers Gateway; event=Lost focus
+2020-10-16 20:39:57:749 IBC: Detected frame entitled: Loading...; event=Activated
+2020-10-16 20:39:57:750 IBC: Detected frame entitled: Loading...; event=Focused
+2020-10-16 20:39:57:750 IBC: Detected frame entitled: Loading...; event=Opened
+2020-10-16 20:39:58:139 IBC: Detected frame entitled: Loading...; event=Lost focus
+2020-10-16 20:39:58:141 IBC: Detected frame entitled: Authenticating...; event=Activated
+2020-10-16 20:39:58:142 IBC: Detected frame entitled: Authenticating...; event=Focused
+2020-10-16 20:39:58:159 IBC: Detected frame entitled: Authenticating...; event=Opened
+2020-10-16 20:39:58:664 IBC: Detected frame entitled: Authenticating...; event=Lost focus
+2020-10-16 20:39:58:665 IBC: Second Factor Authentication dialog event: Activated
+2020-10-16 20:39:58:665 IBC: Second Factor Authentication dialog event: Focused
+2020-10-16 20:39:58:667 IBC: Second Factor Authentication dialog event: Opened
+2020-10-16 20:39:58:667 IBC: Second Factor Authentication dialog opened
+2020-10-16 20:39:58:667 IBC: Second Factor Authentication initiated
+2020-10-16 20:40:06:834 IBC: Second Factor Authentication dialog event: Lost focus
+2020-10-16 20:40:06:835 IBC: Detected frame entitled: Authenticating...; event=Activated
+2020-10-16 20:40:06:835 IBC: Detected frame entitled: Authenticating...; event=Focused
+2020-10-16 20:40:06:843 IBC: Second Factor Authentication dialog event: Closed
+2020-10-16 20:40:06:843 IBC: Second Factor Authentication dialog closed
+2020-10-16 20:40:06:843 IBC: ExitAfterSecondFactorAuthenticationTimeout is set to 'no'
+LogModuleConfigurator-Init: Log4j Ver2.x found on classpath
+LogModuleConfigurator-Init: LogModuleConfigurator initialized with Log4j Verd.x
+2020-10-16 20:40:09:528 IBC: Detected frame entitled: Initializing environment...; event=Lost focus
+2020-10-16 20:40:09:531 IBC: Detected frame entitled: Initializing environment...; event=Focused
+2020-10-16 20:40:09:777 IBC: Detected frame entitled: Starting application...; event=Lost focus
+2020-10-16 20:40:09:778 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:40:09:778 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:40:09:780 IBC: Detected frame entitled: Starting application...; event=Closed
+2020-10-16 20:40:09:780 IBC: Login has completed
+2020-10-16 20:40:13:497 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:40:51:184 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:40:51:184 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:40:52:009 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 20:40:56:679 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 20:40:56:679 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 20:41:01:066 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 22:18:47:516 IBC: Detected frame entitled: IB Gateway; event=Activated
+2020-10-16 22:18:47:517 IBC: Detected frame entitled: IB Gateway; event=Focused
+2020-10-16 22:18:48:800 IBC: Detected frame entitled: IB Gateway; event=Closing
+2020-10-16 22:18:48:917 IBC: Detected frame entitled: IB Gateway; event=Lost focus
+2020-10-16 22:18:48:922 IBC: Detected dialog entitled: Shutdown progress; event=Activated
+2020-10-16 22:18:48:922 IBC: Detected dialog entitled: Shutdown progress; event=Focused
+2020-10-16 22:18:48:924 IBC: Detected dialog entitled: Shutdown progress; event=Opened
+2020-10-16 22:18:49,545 JTS-ShutdownTask-Shutdown_IA-94 ERROR Attempted to append to non-started appender d
+2020-10-16 22:18:49,547 NIA-Input-Queue-2 ERROR Attempted to append to non-started appender d
+2020-10-16 22:18:49,547 NIA-Input-Queue-2 ERROR Attempted to append to non-started appender d
+2020-10-16 22:18:49,679 NIA-Input-Queue-2 ERROR Attempted to append to non-started appender d
+2020-10-16 22:18:49,770 pool-3-thread-1 ERROR Attempted to append to non-started appender f
+
+Gateway finished at 16/10/2020 22:18:50.29
+
+IBC running GATEWAY 980 has finished at 16/10/2020 22:18:50.31
+

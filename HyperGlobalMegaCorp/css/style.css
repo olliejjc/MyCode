@@ -1,0 +1,192 @@
+/* Style header div */
+#headDiv {
+  width: 100%;
+  height: 100px;
+  background-color: #6495ED; 
+  color: white;
+  text-align: center;
+}
+
+/* Style header */
+#header{
+  margin: 0 auto;
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 40px;
+}
+
+/* Style input div */
+#inputDiv {
+  width: 100%;
+  height: 50px;
+  background-color:  #F0F8FF;
+  margin-bottom: 0;
+}
+
+/* Style input buttons */
+input {
+ border-radius: 5px;
+ transition-duration: 0.4s;
+ width: 160px;
+ height: 45px;
+ margin: 2px;
+ /*margin-left: 2em;
+ margin-right: 2em;*/
+}
+
+/* Style input hover */
+input:hover {
+  background-color: #DCDCDC; /* Green */
+  color: white;
+}
+
+/* Remove default bullets */
+ul, #myUL {
+  list-style-type: none;
+}
+
+/* Style list elements */
+li{
+    padding: .0em .0em .9em 2em;
+    margin: .5em 0;
+    background: #ddd;
+    color: #444;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+    border: 1px solid black;
+    display: block;
+}
+
+/* Remove margins and padding from the parent ul */
+#myUL {
+  margin: 0;
+  padding: 0;
+}
+
+/* Style the caret/arrow */
+.caret {
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+  font-size: 25px;
+  color: #483D8B;
+}
+
+/* Style the caret/arrow */
+.key.percentageRevenueChangePositive{
+  user-select: none; /* Prevent text selection */
+  font-size: 25px;
+  color: #483D8B;
+}
+
+/* Style the caret/arrow */
+.key.percentageRevenueChangeNegative{
+  user-select: none; /* Prevent text selection */
+  font-size: 25px;
+  color: #483D8B;
+}
+
+/* Style the caret/arrow */
+#globalSpan{
+  user-select: none; /* Prevent text selection */
+  font-size: 25px;
+  color: #483D8B;
+}
+
+/* Add space between the spans */
+span{
+  margin-right:50px;
+}
+
+/* Style revenue 2022 total */
+.revenue2022{
+  font-size: 25px;
+}
+
+/* Style revenue 2022 total */
+.revenue2022.percentageRevenueChangePositive{
+  font-size: 25px;
+}
+
+/* Style revenue 2022 total */
+.revenue2022.percentageRevenueChangeNegative{
+  font-size: 25px;
+}
+
+/* Style the global revenue percentage */
+#percentageRevenueChangeGlobalPositive {
+  font-size:25px; 
+  font-style: italic; 
+  margin-top:20px; 
+  padding-left:10px; 
+  display:inline-block;
+  color:green;
+}
+
+/* Style the global revenue percentage */
+#percentageRevenueChangeGlobalNegative{
+  font-size:22px; 
+  font-style: italic; 
+  margin-top:20px; 
+  padding-left:10px; 
+  display:inline-block;
+  color:red;
+}
+
+/* Style the revenue percentage */
+.percentageRevenueChangePositive.revenueGrowth{
+  font-size:22px; 
+  font-style: italic; 
+  margin-top:20px; 
+  padding-left:10px; 
+  display:inline-block;
+  color:green;
+}
+
+/* Style the revenue percentage */
+.percentageRevenueChangeNegative.revenueGrowth{
+  font-size:22px; 
+  font-style: italic; 
+  margin-top:20px; 
+  padding-left:10px; 
+  display:inline-block;
+  color:red;
+}
+
+/* Style the caret text */
+.caret.percentageRevenueChangePositive{
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+  font-size: 25px;
+}
+
+/* Style the caret text */
+.caret.percentageRevenueChangeNegative{
+  cursor: pointer;
+  user-select: none; /* Prevent text selection */
+  font-size: 25px;
+}
+
+/* Create the caret/arrow with a unicode, and style it */
+.caret::before {
+  content: "\25B6";
+  color: black;
+  display: inline-block;
+  margin-right: 10px
+}
+
+/* Rotate the caret/arrow icon when clicked on (using JavaScript) */
+.caret-down::before {
+  transform: rotate(90deg);
+}
+
+/* Hide the nested list */
+.nested {
+  display: none;
+}
+
+/* Show the nested list when the user clicks on the caret/arrow (with JavaScript) */
+.active {
+  display: block;
+}

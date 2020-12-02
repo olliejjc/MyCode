@@ -1,0 +1,88 @@
+.optionTitle{
+    font-weight: bold;
+    color:black;
+}
+
+.closeActionColumn{
+    text-align: center !important;
+}
+
+.closeActionButton{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.deleteActionColumn{
+    text-align: center !important;
+}
+
+.deleteActionButton{
+    text-align: center !important;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color:red;
+    text-shadow: 0 1px 0 #fff;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+#closeTradeHeader{
+    text-align: center !important;
+}
+
+#deleteTradeHeader{
+    text-align: center !important;
+}
+
+.screenshotImage{
+    height: 100%;
+    width: 100%;
+}
+
+.addNewScreenshotButton{
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    padding: 0;
+    background-color: transparent;
+    border: 0;
+}
+
+.span1{
+    width: 25px; float: left; 
+}
+.span2{ 
+    width: 24px; float: right; 
+}
+
+#numbertext{
+    font-weight: bold;
+    font-size: large;
+}
+
+#errorMessageCalculatorContainer{
+    color:red;
+}
+
+#myChart{
+    height:600px;
+}
+
+#portfolioHoldingsContainer{
+    display:none;
+}
+
+#sidebarToggleContainer{
+    margin-left: 5px;
+}
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/interview%20questions/HyperGlobalMegaCorp/css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="headDiv">
+      <h1 id="header">HyperGlobalMegaCorp Financial Report</h1>
+    </div>
+    <div id="inputDiv">
+      <input type="button" id="expandAllButton" onclick="expandOrCollapseAll()" value="Expand All">  
+      <input type="button" id="togglePositiveRevenue" onclick="togglePositiveRevenueDisplay()" value="Hide Positive Revenue">  
+      <input type="button" id="switchGroupingButton" onclick="orderBySelectedGrouping()" value="Order By Product Line">  
+    </div>
+    <ul id="myUL">
+      <li id="Global">
+        <ul id ="testUL" class="nested">
+        </ul>
+      </li>
+    </ul>
+    <script src="/interview%20questions/HyperGlobalMegaCorp/js/generateFinancialReport.js"></script>
+</body>
+</html>

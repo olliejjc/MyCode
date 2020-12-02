@@ -1,15 +1,36 @@
 List of Projects/Class Assignments on Github
 
-1. Cryptocurrency Calculator: Aims to provide a simple and efficient method to calculate the current value of digital
+1. BlackJack: CLI Based BlackJack Game
+
+2. Combinations: Interview Assignment in PHP to generate unique combinations of token-value pairs
+
+3. Cryptocurrency Calculator: Aims to provide a simple and efficient method to calculate the current value of digital
    currency that you own. Personal project created for the purpose of improving basic java skills.
    
-2. DietCounter: Records amount of macros consumed on a particular day and records data to text file. Useful tool for 
+4. DietCounter: Records amount of macros consumed on a particular day and records data to text file. Useful tool for 
    tracking diet and maintaining records of the data. Personal project created for the purpose of improving basic java 
    skills.
 
-3. Final Programming Assignment: Completed class assignment which requires the creation of a JTable which will display
+5. Final Programming Assignment: Completed class assignment which requires the creation of a JTable which will display
    data from a file which is subsuquently stored in different categories. Every permunation of a row on the JTable is
    displayed on a JList. Also employs multithreading, can be tested using the provided "sum" file or a file of the users
    choice.
+
+6. HyperGlobalMegaCorp: Interview Assignment to generate a company report using annual sales figures (in JSON format). Present the information via a dynamic heirarchal structure.
+   The UI should be rendered in browser i.e using client side Javascript. Server side support to be assumed is the REST API which provides the RAW data (in reality, the provided data.json file) 
+   Required to function with older browser, in this case Firefox 2012.
    
-4. PocketBells: Kettlebell application built by a three man team as part of our HDip Project.
+7. PocketBells: Kettlebell application built by a three man team as part of our HDip Project.
+
+8. TradingPortfolioTracker: My personal project built from scratch to help easily track and record my progress as a professional trader. Currently offers the following features:
+   - User Settings: Unique user accounts with personalised user settings
+   - Portfolio Performance: Charts with variable selectable time periods to show portfolio progress over a specific time period
+   - Portfolio Holdings: Display of current open positions/holdings
+   - Risk Calculator: Calculates the dollar risk taken per trade, max shares to purchase and recommended position size
+   - Add New Trades: Record details of new trades into the TradingPortfolioTracker database, this also includes any screenshots related to the associated trade
+   - View Trade History: View any current or historic trade, automated tracking and display of monthly balances and monthly profit/loss, detailed descriptions of each trade, 
+                         ability to add and view new screenshots
+   - Live Portfolio: Shows your current live Binance Account Holdings
+   
+9. Wordfinder: Interview assignment to return the longest word from a file with a list of dictionary words. Enter a max 12 letter string and return the longest word from the dictionary 
+   words that can be built using the max 12 letter string.

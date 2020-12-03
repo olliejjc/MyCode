@@ -35,8 +35,10 @@
                     </table>
                 </div>
                 <div class="row">
-                    <div class="col-md-6 text-right"><h3>Total Dollar Value Of Holdings</h3></div>
-                    <div class="col-md-6"><h3>${{$binanceTotalDollarHoldings}}</h3></div>
+                    <div class="col-lg-3"></div>
+                    <div class="col-lg-3 d-flex justify-content-center"><h3>Total Dollar Value Of Holdings</h3></div>
+                    <div class="col-lg-3 d-flex justify-content-center"><h3>${{$binanceTotalDollarHoldings}}</h3></div>
+                    <div class="col-lg-3"></div>
                 </div>
             </div>
             @else

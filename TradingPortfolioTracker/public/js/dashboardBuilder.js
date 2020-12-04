@@ -31,7 +31,9 @@ jQuery(document).ready(function($){
         var timePeriod = $('#selecttimeperiod').find(":selected").text();;
         var labels = getLabels(timePeriod);
         var dataSet = getChartDataSet(timePeriod, yearPeriod);
-        updatePortfolioChart(labels, dataSet);
+        var suggestedMinYAxis = getSuggestedMinYAxis(dataSet);
+        var suggestedMaxYAxis = getSuggestedMaxYAxis(dataSet);
+        updatePortfolioChart(labels, dataSet, suggestedMinYAxis, suggestedMaxYAxis);
         if(timePeriod != "Yearly View"){
             $('#yearPeriodSelectContainer').hide();
         }
@@ -45,7 +47,9 @@ jQuery(document).ready(function($){
         var yearPeriod = $('#selectyearperiod').find(":selected").text();
         var labels = getLabels(timePeriod);
         var dataSet = getChartDataSet(timePeriod, yearPeriod);
-        updatePortfolioChart(labels, dataSet);
+        var suggestedMinYAxis = getSuggestedMinYAxis(dataSet);
+        var suggestedMaxYAxis = getSuggestedMaxYAxis(dataSet);
+        updatePortfolioChart(labels, dataSet, suggestedMinYAxis, suggestedMaxYAxis);
     });
 });
 
@@ -54,6 +58,9 @@ function generatePortfolioChart(timePeriod, yearPeriod){
 
     var ctx = document.getElementById('myChart').getContext('2d');
     var dataSet = getChartDataSet(timePeriod, yearPeriod);
+    var suggestedMinYAxis = getSuggestedMinYAxis(dataSet);
+    var suggestedMaxYAxis = getSuggestedMaxYAxis(dataSet);
+    console.log(dataSet);
     var labels = getLabels(timePeriod);
     chart = new Chart(ctx, {
         /* The type of chart we want to create */
@@ -64,34 +71,70 @@ function generatePortfolioChart(timePeriod, yearPeriod){
             labels: labels,
             datasets: [{
                 label: 'Portfolio ($)',
-                backgroundColor: 'rgb(255, 99, 132)',
-                borderColor: 'rgb(255, 99, 132)',
+                backgroundColor: 'aliceblue',
+                borderColor: 'steelblue',
                 data: dataSet
             }]
         },
 
         options: {
             maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    display: true,
+                    ticks: {
+                        suggestedMin: suggestedMinYAxis,
+                        beginAtZero: true,
+                        suggestedMax:suggestedMaxYAxis
+                    }
+                }]
+            },
+            hover: {
+                mode: 'nearest',
+                intersect: true
+            },
+            tooltips: {
+                mode: 'index',
+                intersect: false,
+            }
         }
     });
 }
 
 /* update existing portfolio chart with new labels and dataset */
-function updatePortfolioChart(labels, dataSet){
+function updatePortfolioChart(labels, dataSet, suggestedMinYAxis, suggestedMaxYAxis){
     chart.destroy();
     var ctx = document.getElementById('myChart').getContext('2d');
     var chartData = {
         labels: labels,
         datasets: [{
             label: 'Portfolio ($)',
-            backgroundColor: 'rgb(255, 99, 132)',
-            borderColor: 'rgb(255, 99, 132)',
+            backgroundColor: 'aliceblue',
+            borderColor: 'steelblue',
             data: dataSet
         }]
     };
 
     var chartOptions = {
         maintainAspectRatio: false,
+        scales: {
+            yAxes: [{
+                display: true,
+                ticks: {
+                    suggestedMin: suggestedMinYAxis,
+                    beginAtZero: true,
+                    suggestedMax:suggestedMaxYAxis
+                }
+            }]
+        },
+        hover: {
+            mode: 'nearest',
+            intersect: true
+        },
+        tooltips: {
+            mode: 'index',
+            intersect: false,
+        }
     };
 
     chart = new Chart(ctx, { type: 'line', data: chartData, options: chartOptions });
@@ -152,7 +195,6 @@ function getChartDataSet(timePeriod, yearPeriod){
         async: false,
         success: function (chartDataSet) {
             //chartDataSetString = chartDataSet.map(String);
-            console.log(chartDataSet);
             chartDataSetString = chartDataSet;
         },
         error: function (data) {
@@ -201,6 +243,34 @@ function getLabels(timePeriod){
         var yearsWithTrades = getYearsWithTrades();
         return yearsWithTrades;
     }
+}
+
+function getSuggestedMinYAxis(dataset){
+    var smallestValue = 0;
+    for (var i = 0; i < dataset.length; i++) {
+        if(dataset[i] < smallestValue){
+            smallestValue = dataset [i];
+        }
+    }
+    if(smallestValue > 0){
+        var maxYAxis = 0;
+        return maxYAxis;
+    }
+    else{
+        var maxYAxis = smallestValue * 2;
+        return maxYAxis;
+    }
+}
+
+function getSuggestedMaxYAxis(dataset){
+    var largestValue = 0;
+    for (var i = 0; i < dataset.length; i++) {
+        if(dataset[i] > largestValue){
+            largestValue = dataset [i];
+        }
+    }
+    var maxYAxis = largestValue * 2;
+    return maxYAxis;
 }
 
 /* Generates a list of years that trades have been made in */

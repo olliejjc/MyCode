@@ -253,10 +253,10 @@ class TradesController extends Controller{
 
     public function addNewTrade(Request $req){
         $validatedData = $req->validate([
-            'asset_name' => 'required|alpha',
+            'asset_name' => 'required',
             'trade_size' => 'required|numeric|min:0.00|max:100000.00',
             'trade_value' => 'required|numeric|min:0.00|max:10000000.00',
-            'date_trade_opened' => 'required|date_format:Y-m-d|before:tomorrow|after:2018-01-01',
+            'date_trade_opened' => 'required|date_format:Y-m-d|before:tomorrow|after_or_equal:2018-01-01',
             'price_purchased_at' => 'required|numeric|min:0.00|max:100000.00',
             'screenshots.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
@@ -370,7 +370,7 @@ class TradesController extends Controller{
 
     public function validateCloseTradeInputData(Request $req, $dateTradeClosedInputName, $priceClosedAtInputName, $profitLossInputName,  $dateTradeOpened){
         $validatedData = $req->validate([
-            $dateTradeClosedInputName => 'required|date_format:Y-m-d|before:tomorrow|after:' . $dateTradeOpened,
+            $dateTradeClosedInputName => 'required|date_format:Y-m-d|before:tomorrow|after_or_equal:' . $dateTradeOpened,
             $priceClosedAtInputName => 'required|numeric|min:0.00|max:1000000.00',
             $profitLossInputName => 'required|numeric',
         ], 

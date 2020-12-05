@@ -60,7 +60,6 @@ function generatePortfolioChart(timePeriod, yearPeriod){
     var dataSet = getChartDataSet(timePeriod, yearPeriod);
     var suggestedMinYAxis = getSuggestedMinYAxis(dataSet);
     var suggestedMaxYAxis = getSuggestedMaxYAxis(dataSet);
-    console.log(dataSet);
     var labels = getLabels(timePeriod);
     chart = new Chart(ctx, {
         /* The type of chart we want to create */
@@ -84,8 +83,7 @@ function generatePortfolioChart(timePeriod, yearPeriod){
                     display: true,
                     ticks: {
                         suggestedMin: suggestedMinYAxis,
-                        beginAtZero: true,
-                        suggestedMax:suggestedMaxYAxis
+                        suggestedMax: suggestedMaxYAxis
                     }
                 }]
             },
@@ -122,8 +120,7 @@ function updatePortfolioChart(labels, dataSet, suggestedMinYAxis, suggestedMaxYA
                 display: true,
                 ticks: {
                     suggestedMin: suggestedMinYAxis,
-                    beginAtZero: true,
-                    suggestedMax:suggestedMaxYAxis
+                    suggestedMax: suggestedMaxYAxis
                 }
             }]
         },
@@ -246,20 +243,15 @@ function getLabels(timePeriod){
 }
 
 function getSuggestedMinYAxis(dataset){
-    var smallestValue = 0;
+    var smallestValue = dataset[0];
     for (var i = 0; i < dataset.length; i++) {
         if(dataset[i] < smallestValue){
             smallestValue = dataset [i];
         }
     }
-    if(smallestValue > 0){
-        var maxYAxis = 0;
-        return maxYAxis;
-    }
-    else{
-        var maxYAxis = smallestValue * 2;
-        return maxYAxis;
-    }
+   
+    var minYAxis = smallestValue * 0.98;
+    return minYAxis;
 }
 
 function getSuggestedMaxYAxis(dataset){
@@ -269,7 +261,7 @@ function getSuggestedMaxYAxis(dataset){
             largestValue = dataset [i];
         }
     }
-    var maxYAxis = largestValue * 2;
+    var maxYAxis = largestValue * 1.02;
     return maxYAxis;
 }
 

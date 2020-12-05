@@ -57,8 +57,8 @@ jQuery(document).ready(function($){
             },
             dataType: 'JSON',
             success: function (data) {
-                var monthlyBalance = data[0];
-                var monthlyProfitLoss = data[1];
+                var monthlyBalance = Math.round((data[0] + Number.EPSILON) * 100) / 100;
+                var monthlyProfitLoss = Math.round((data[1] + Number.EPSILON) * 100) / 100;
                 generateUpdatedTradeHistoryTotals(monthlyBalance, monthlyProfitLoss);
             },
             error: function (data) {

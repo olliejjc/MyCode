@@ -74,6 +74,7 @@ class TradesController extends Controller{
                 }
             }
         }
+        $portfolioSize = number_format((float)$portfolioSize, 2, '.', '');
         return $portfolioSize;
     }
 
@@ -164,6 +165,7 @@ class TradesController extends Controller{
                 $totalMonthlyProfitLoss += $tradeProfitLoss;
             }
         }
+        $totalMonthlyProfitLoss = number_format((float)$totalMonthlyProfitLoss, 2, '.', '');
         return $totalMonthlyProfitLoss;
     }
 

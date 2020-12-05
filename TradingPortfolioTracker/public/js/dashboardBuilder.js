@@ -9,7 +9,6 @@ jQuery(document).ready(function($){
     jQuery(document).on('change','#selectPortfolioView',function () {
         var dashboardDisplayChoice = $('#selectPortfolioView').find(":selected").text()
         if(dashboardDisplayChoice !== "Portfolio Performance"){
-            var oldcanv = document.getElementById('myChart');
             $('#timePeriodSelectContainer').hide();
             $('#yearPeriodSelectContainer').hide();
             $('#portfolioHoldingsContainer').show();
@@ -161,7 +160,8 @@ function generatePortfolioHoldings(){
                 }
             });
             if(tradesOpened == false){
-                $('#portfolioHoldingsContainer').append("<h2>No Currently Open Trades</h2>");
+                var noOpenTradesHeader = document.getElementById("noOpenTradesIdentifier");
+                noOpenTradesHeader.textContent = "No Currently Open Trades";
             }                     
         },
         error: function (data) {

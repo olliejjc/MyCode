@@ -57,8 +57,8 @@ jQuery(document).ready(function($){
             },
             dataType: 'JSON',
             success: function (data) {
-                var monthlyBalance = Math.round((data[0] + Number.EPSILON) * 100) / 100;
-                var monthlyProfitLoss = Math.round((data[1] + Number.EPSILON) * 100) / 100;
+                var monthlyBalance = data[0];
+                var monthlyProfitLoss = data[1]
                 generateUpdatedTradeHistoryTotals(monthlyBalance, monthlyProfitLoss);
             },
             error: function (data) {
@@ -273,7 +273,18 @@ function generateUpdatedTradeHistory(tradeMonth, tradeYear, tradesWithMatchingDa
                             $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeIdentifier).append("<td class=screenshotColumn><div class=span1></div><div class=span2><button type='button' class='addNewScreenshotButton' id='uploadScreenshotTradeID" + tradeIdentifier + "' data-toggle='modal' data-target='#screenshotUploadModal'><span aria-hidden='true'>&#43;</span></button></div></td>");
                         }
                         else{
-                            $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeIdentifier).append("<td> " + trade[k] + "</td>");
+                            /* Checks columns that have possible negative dollar columns and adjusts them to display the negative value correctly */
+                            if(k == "price_purchased_at" || k == "trade_value" || k == "price_closed_at" || k == "profit_loss"){
+                                if(trade[k] < 0){
+                                    $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeIdentifier).append("<td> -$" + Math.abs(trade[k]) + "</td>");
+                                }
+                                else{
+                                    $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeIdentifier).append("<td> $" + trade[k] + "</td>");
+                                }
+                            }
+                            else{
+                                $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeIdentifier).append("<td> " + trade[k] + "</td>");
+                            }
                         }
                     }
                     /* Certain attributes of a trade won't be set on creation of a trade such as date_trade_closed and price_closed_at and need to be handled seperately. They are generated as
@@ -304,5 +315,16 @@ function generateUpdatedTradeHistory(tradeMonth, tradeYear, tradesWithMatchingDa
 /* Builds the display of total monthly balance and monthly profit and loss for the trade month selected */
 function generateUpdatedTradeHistoryTotals(monthlyBalance, monthlyProfitLoss){
     document.getElementById("tradeHistoryTotalsTableBody").innerHTML = "";
-    $('#tradeHistoryTotalsTableBody').append("<tr><td>$" + monthlyBalance + "</td><td>$" + monthlyProfitLoss + "</td></tr>");
+    if(monthlyBalance >= 0 & monthlyProfitLoss >= 0){
+        $('#tradeHistoryTotalsTableBody').append("<tr><td>$" + monthlyBalance + "</td><td>$" + monthlyProfitLoss + "</td></tr>");
+    }
+    else if(monthlyBalance >= 0 & monthlyProfitLoss < 0){
+        $('#tradeHistoryTotalsTableBody').append("<tr><td>$" + monthlyBalance + "</td><td>-$" + Math.abs(monthlyProfitLoss) + "</td></tr>");
+    }
+    else if(monthlyBalance < 0 & monthlyProfitLoss >= 0){
+        $('#tradeHistoryTotalsTableBody').append("<tr><td>-$" + Math.abs(monthlyBalance) + "</td><td>$" + monthlyProfitLoss + "</td></tr>");
+    }
+    else{
+        $('#tradeHistoryTotalsTableBody').append("<tr><td>-$" + Math.abs(monthlyBalance) + "</td><td>-$" + Math.abs(monthlyProfitLoss) + "</td></tr>");
+    }
 }

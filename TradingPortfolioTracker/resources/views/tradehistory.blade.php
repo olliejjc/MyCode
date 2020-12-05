@@ -88,14 +88,30 @@
                                     @foreach($trades as $trade)
                                     <tr id="tradeRow{{$trade->id}}">
                                         <td>{{$trade->holding_name}}</td>
-                                        <td>${{$trade->price_purchased_at}}</td>
+                                        @if($trade->price_purchased_at > 0)
+                                            <td>${{$trade->price_purchased_at}}</td>
+                                        @else
+                                            <td>-${{$trade->price_purchased_at*-1}}</td>
+                                        @endif
                                         <td>{{$trade->trade_size}}</td>
-                                        <td>${{$trade->trade_value}}</td>
+                                        @if($trade->trade_value > 0)
+                                            <td>${{$trade->trade_value}}</td>
+                                        @else
+                                            <td>-${{$trade->trade_value*-1}}</td>
+                                        @endif
                                         <td>{{$trade->date_trade_opened}}</td>
                                         @if($trade->date_trade_closed != null && $trade->price_closed_at != null && $trade->profit_loss != null)
                                             <td>{{$trade->date_trade_closed}}</td>
-                                            <td>{{$trade->price_closed_at}}</td>
-                                            <td>{{$trade->profit_loss}}</td>
+                                            @if($trade->price_closed_at > 0)
+                                                <td>${{$trade->price_closed_at}}</td>
+                                            @else
+                                                <td>-${{$trade->price_closed_at*-1}}</td>
+                                            @endif
+                                            @if($trade->profit_loss > 0)
+                                                <td>${{$trade->profit_loss}}</td>
+                                            @else
+                                                <td>-${{$trade->profit_loss*-1}}</td>
+                                            @endif
                                         @else
                                             <td><input type="date" id="date_trade_closed_id_{{$trade->id}}" name="date_trade_closed_id_{{$trade->id}}"></input></td>
                                             <td><input id="price_closed_at_id_{{$trade->id}}" name="price_closed_at_id_{{$trade->id}}"></input></td>
@@ -146,8 +162,16 @@
                             </thead>
                             <tbody id="tradeHistoryTotalsTableBody">
                                 <tr>
-                                    <td>${{$monthlyBalance}}</td>
-                                    <td>${{$monthlyProfitLoss}}</td>
+                                    @if($monthlyBalance > 0)
+                                        <td>${{$monthlyBalance}}</td>
+                                    @else
+                                        <td>-${{$monthlyBalance*-1}}</td>
+                                    @endif
+                                    @if($monthlyProfitLoss > 0)
+                                        <td>${{$monthlyProfitLoss}}</td>
+                                    @else
+                                        <td>-${{$monthlyProfitLoss*-1}}</td>
+                                    @endif
                                 </tr>
                             </tbody>
                         </table>

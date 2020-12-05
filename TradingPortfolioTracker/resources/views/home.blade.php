@@ -49,6 +49,7 @@
                         <tbody id="portfolioHoldingsTableBody">
                         </tbody>
                     </table>
+                    <h2 id="noOpenTradesIdentifier"></h2>
                 </div>
             </div>
         </main>

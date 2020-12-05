@@ -237,32 +237,50 @@ function getLabels(timePeriod){
         return ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     }
     else{
-        var yearsWithTrades = getYearsWithTrades();
-        return yearsWithTrades;
+        var yearsWithTradesLabels = getYearsWithTrades();
+        yearsWithTradesLabels.splice(0, 0, "Starting Balance");
+        return yearsWithTradesLabels;
     }
 }
 
 function getSuggestedMinYAxis(dataset){
-    var smallestValue = dataset[0];
+    var smallestValue = parseFloat(dataset[0]);
     for (var i = 0; i < dataset.length; i++) {
-        if(dataset[i] < smallestValue){
-            smallestValue = dataset [i];
+        var tradeBalance = parseFloat(dataset[i]);
+        if(tradeBalance < smallestValue){
+            smallestValue = tradeBalance;
         }
     }
-   
-    var minYAxis = smallestValue * 0.98;
-    return minYAxis;
+    if(smallestValue > 0){
+        var minYAxis = smallestValue * 0.97;
+        console.log(minYAxis);
+        return minYAxis;
+    }
+    else{
+        var minYAxis = smallestValue * 1.03;
+        console.log(minYAxis);
+        return minYAxis;
+    }
 }
 
 function getSuggestedMaxYAxis(dataset){
-    var largestValue = 0;
+    var largestValue = parseFloat(dataset[0]);
     for (var i = 0; i < dataset.length; i++) {
-        if(dataset[i] > largestValue){
-            largestValue = dataset [i];
+        var tradeBalance = parseFloat(dataset[i]);
+        if(tradeBalance > largestValue){
+            largestValue = tradeBalance;
         }
     }
-    var maxYAxis = largestValue * 1.02;
-    return maxYAxis;
+    if(largestValue < 0){
+        var maxYAxis = largestValue * 0.97;
+        console.log(maxYAxis);
+        return maxYAxis;
+    }
+    else{
+        var maxYAxis = largestValue * 1.03;
+        console.log(maxYAxis);
+        return maxYAxis;
+    }
 }
 
 /* Generates a list of years that trades have been made in */

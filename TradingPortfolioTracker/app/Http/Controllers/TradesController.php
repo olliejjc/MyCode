@@ -145,6 +145,8 @@ class TradesController extends Controller{
         }
         else if($timePeriod == ("Overall View")){
             $tradeYears = TradesController::getListOfTradeYears();
+            $user = User::where('username', Auth::user()->username)->first();
+            $tradeChartDataSets[] = $user -> portfolio_size;
             /* Gets the balance for each year */
             foreach($tradeYears as $tradeYear){
                 $tradeMonths = TradesController::getTradeMonthsByYear($tradeYear);

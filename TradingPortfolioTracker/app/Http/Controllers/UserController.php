@@ -5,13 +5,15 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\User;
 use Auth;
+use App\Http\Controllers\TradesController;
 
 class UserController extends Controller{
     
     /* Retrieve user details for use on risk calculator */
     public function showRiskCalculatorSettings(){
         $user = User::where('username', Auth::user()->username)->first();
-        return view('riskcalculator', ['user' => $user]);
+        $currentPortfolioSize = TradesController::getCurrentPortfolioSize();
+        return view('riskcalculator', ['user' => $user, 'currentPortfolioSize' => $currentPortfolioSize]);
     }
 
     public function showUserSettings(){

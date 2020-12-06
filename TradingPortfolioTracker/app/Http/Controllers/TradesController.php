@@ -50,7 +50,7 @@ class TradesController extends Controller{
         return json_encode($monthlyTotals);
     }
 
-    public function getMonthlyBalance($monthSelected, $yearSelected){
+    public static function getMonthlyBalance($monthSelected, $yearSelected){
         $user = User::where('username', Auth::user()->username)->first();
         $portfolioSize = $user -> portfolio_size;
         $trades = TradesController::index();
@@ -171,7 +171,7 @@ class TradesController extends Controller{
         return $totalMonthlyProfitLoss;
     }
 
-    public function getTradesByLatestMonth(){
+    public static function getTradesByLatestMonth(){
         $tradesFromLatestMonth = array();
         $trades = TradesController::index();
         $latestMonthChecked = 0;
@@ -358,14 +358,25 @@ class TradesController extends Controller{
         return json_encode($tradesAndDateData);
     }
 
-    public function getTradeMonth($trade){
+    public static function getCurrentPortfolioSize(){
+        $trades = array();
+        $trades = TradesController::getTradesByLatestMonth();
+        if(!empty($trades)){
+            $tradeMonth = TradesController::getTradeMonth($trades[0]);
+            $tradeYear = TradesController::getTradeYear($trades[0]);
+            $monthlyBalance = TradesController::getMonthlyBalance($tradeMonth, $tradeYear);
+            return $monthlyBalance;
+        }
+    }
+
+    public static function getTradeMonth($trade){
         $tradeDate = $trade -> date_trade_opened;
         $date = new Carbon( $tradeDate );
         $month = $date->format('F');
         return $month;
     }
 
-    public function getTradeYear($trade){
+    public static function getTradeYear($trade){
         $tradeDate = $trade -> date_trade_opened;
         $date = new Carbon( $tradeDate );
         $year = strval($date -> year);

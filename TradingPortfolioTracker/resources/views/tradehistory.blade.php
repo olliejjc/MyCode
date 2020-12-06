@@ -162,12 +162,12 @@
                             </thead>
                             <tbody id="tradeHistoryTotalsTableBody">
                                 <tr>
-                                    @if($monthlyBalance > 0)
+                                    @if($monthlyBalance >= 0)
                                         <td>${{$monthlyBalance}}</td>
                                     @else
                                         <td>-${{$monthlyBalance*-1}}</td>
                                     @endif
-                                    @if($monthlyProfitLoss > 0)
+                                    @if($monthlyProfitLoss >= 0)
                                         <td>${{$monthlyProfitLoss}}</td>
                                     @else
                                         <td>-${{$monthlyProfitLoss*-1}}</td>

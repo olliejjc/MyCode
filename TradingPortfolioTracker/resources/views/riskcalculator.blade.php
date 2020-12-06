@@ -15,7 +15,11 @@
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label for="account-fn">Portfolio Size</label>
-                                <input class="form-control" type="text" id="portfolio_size" name="portfolio_size" value="${{$user->portfolio_size}}" readonly="readonly">
+                                @if(isset($currentPortfolioSize))
+                                    <input class="form-control" type="text" id="portfolio_size" name="portfolio_size" value="${{$currentPortfolioSize}}" readonly="readonly">
+                                @else
+                                    <input class="form-control" type="text" id="portfolio_size" name="portfolio_size" value="${{$user->portfolio_size}}" readonly="readonly">
+                                @endif
                             </div>
                         </div>
                         <div class="col-md-6">

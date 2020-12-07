@@ -160,7 +160,7 @@ jQuery(document).ready(function($){
                 $('#addedScreenshotMessage').html(result);
                 $('#addedScreenshotMessage').css('color', "green");
                 $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeID + " .span1").html("");
-                $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeID + " .span1").append("<input type=image id=screenshotTradeID" + tradeID + " class=screenshotImage src=" + assetBaseUrl + "image/screenshot.png data-toggle=modal data-target=#screenshotDisplayModal>");
+                $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeID + " .span1").append("<input type=image id=screenshotTradeID" + tradeID + " class=screenshotImage src=" + assetBaseUrl + "image/screenshotView.png data-toggle=modal data-target=#screenshotDisplayModal>");
                 
             },
             error: function (data) {
@@ -218,10 +218,10 @@ function generateScreenshotDisplayModal(id){
             /* Loops through all the screenshots associated with a trade and adds them to the carousel */
             for(var i = 0; i < response.length; i++){
                 if(i == 0){
-                    $('#carousel-inner-screenshotupload').append("<div class='carousel-item active'><img class='d-block w-100' src=/image/" + response[i] + "></div>");
+                    $('#carousel-inner-screenshotupload').append("<div class='carousel-item active'><img class='d-block w-100' src=/screenshots/" + response[i] + "></div>");
                 }
                 else{
-                    $('#carousel-inner-screenshotupload').append("<div class='carousel-item'><img class='d-block w-100' src=/image/" + response[i] + "></div>");
+                    $('#carousel-inner-screenshotupload').append("<div class='carousel-item'><img class='d-block w-100' src=/screenshots/" + response[i] + "></div>");
                 }
             }
             $('#modalFooterScreenshotDisplay').append("<div class='col-sm'></div><div class='col-sm d-flex justify-content-center'><span id='numbertext'>1/" + (response.length) + "</span></div><div class='col-sm d-flex justify-content-end'><button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button></div>");
@@ -267,7 +267,7 @@ function generateUpdatedTradeHistory(tradeMonth, tradeYear, tradesWithMatchingDa
                     if(trade[k]!=null){
                         /* Only displays the screenshots display button if screenshots exist*/
                         if(k == "has_screenshots" && trade[k] == 1){
-                            $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeIdentifier).append("<td class=screenshotColumn><div class=span1><input type=image id=screenshotTradeID" + tradeIdentifier + " class=screenshotImage src=" + assetBaseUrl + "image/screenshot.png data-toggle=modal data-target=#screenshotDisplayModal></div><div class=span2><button type='button' class='addNewScreenshotButton' id='uploadScreenshotTradeID" + tradeIdentifier + "' data-toggle='modal' data-target='#screenshotUploadModal'><span aria-hidden='true'>&#43;</span></button></div></td>");
+                            $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeIdentifier).append("<td class=screenshotColumn><div class=span1><input type=image id=screenshotTradeID" + tradeIdentifier + " class=screenshotImage src=" + assetBaseUrl + "image/screenshotView.png data-toggle=modal data-target=#screenshotDisplayModal></div><div class=span2><button type='button' class='addNewScreenshotButton' id='uploadScreenshotTradeID" + tradeIdentifier + "' data-toggle='modal' data-target='#screenshotUploadModal'><span aria-hidden='true'>&#43;</span></button></div></td>");
                         }
                         else if(k == "has_screenshots" && trade[k] != 1){
                             $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeIdentifier).append("<td class=screenshotColumn><div class=span1></div><div class=span2><button type='button' class='addNewScreenshotButton' id='uploadScreenshotTradeID" + tradeIdentifier + "' data-toggle='modal' data-target='#screenshotUploadModal'><span aria-hidden='true'>&#43;</span></button></div></td>");
@@ -281,6 +281,9 @@ function generateUpdatedTradeHistory(tradeMonth, tradeYear, tradesWithMatchingDa
                                 else{
                                     $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeIdentifier).append("<td> $" + trade[k] + "</td>");
                                 }
+                            }
+                            else if(k == "date_trade_opened" || k == "date_trade_closed"){
+                                $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeIdentifier).append("<td> " + trade[k].split("-").reverse().join("-") + "</td>");
                             }
                             else{
                                 $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+tradeIdentifier).append("<td> " + trade[k] + "</td>");

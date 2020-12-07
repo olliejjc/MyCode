@@ -99,9 +99,9 @@
                                         @else
                                             <td>-${{$trade->trade_value*-1}}</td>
                                         @endif
-                                        <td>{{$trade->date_trade_opened}}</td>
+                                        <td>{{ \Carbon\Carbon::parse($trade->date_trade_opened)->format('d/m/Y')}}</td>
                                         @if($trade->date_trade_closed != null && $trade->price_closed_at != null && $trade->profit_loss != null)
-                                            <td>{{$trade->date_trade_closed}}</td>
+                                            <td>{{ \Carbon\Carbon::parse($trade->date_trade_closed)->format('d/m/Y')}}</td>
                                             @if($trade->price_closed_at > 0)
                                                 <td>${{$trade->price_closed_at}}</td>
                                             @else

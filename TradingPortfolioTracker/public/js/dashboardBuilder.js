@@ -155,7 +155,7 @@ function generatePortfolioHoldings(){
                     $('#portfolioHoldingsTable #portfolioHoldingsTableBody #portfolioHoldingsRow' + data[i].id).append("<td>$" + data[i].price_purchased_at + "</td>");
                     $('#portfolioHoldingsTable #portfolioHoldingsTableBody #portfolioHoldingsRow' + data[i].id).append("<td>" + data[i].trade_size + "</td>");
                     $('#portfolioHoldingsTable #portfolioHoldingsTableBody #portfolioHoldingsRow' + data[i].id).append("<td>$" + data[i].trade_value + "</td>");
-                    $('#portfolioHoldingsTable #portfolioHoldingsTableBody #portfolioHoldingsRow' + data[i].id).append("<td>" + data[i].date_trade_opened + "</td>");
+                    $('#portfolioHoldingsTable #portfolioHoldingsTableBody #portfolioHoldingsRow' + data[i].id).append("<td>" + data[i].date_trade_opened.split("-").reverse().join("-") + "</td>");
                     tradesOpened = true;
                 }
             });

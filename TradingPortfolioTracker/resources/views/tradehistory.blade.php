@@ -119,7 +119,7 @@
                                         @endif
                                         {{-- Only shows screeenshot display button if screenshots exist --}}
                                         @if($trade->has_screenshots == 1)
-                                            <td class="screenshotColumn"><div class="span1"><input type="image" id="screenshotTradeID{{$trade->id}}" class="screenshotImage" src="{{URL::asset('/image/screenshot.png')}}" data-toggle="modal" data-target="#screenshotDisplayModal"></div><div class="span2"><button type="button" class="addNewScreenshotButton" id="uploadScreenshotTradeID{{$trade->id}}" data-toggle="modal" data-target="#screenshotUploadModal"><span aria-hidden="true">&#43;</span></button></div></td>
+                                            <td class="screenshotColumn"><div class="span1"><input type="image" id="screenshotTradeID{{$trade->id}}" class="screenshotImage" src="{{URL::asset('/image/screenshotView.png')}}" data-toggle="modal" data-target="#screenshotDisplayModal"></div><div class="span2"><button type="button" class="addNewScreenshotButton" id="uploadScreenshotTradeID{{$trade->id}}" data-toggle="modal" data-target="#screenshotUploadModal"><span aria-hidden="true">&#43;</span></button></div></td>
                                         @else
                                             <td class="screenshotColumn"><div class="span1"></div><div class="span2"><button type="button" class="addNewScreenshotButton" id="uploadScreenshotTradeID{{$trade->id}}" data-toggle="modal" data-target="#screenshotUploadModal"><span aria-hidden="true">&#43;</span></button></div></td>
                                         @endif

@@ -7,6 +7,7 @@ use App\Trade;
 use App\User;
 use Auth;
 use App\Screenshot;
+use App\Http\Controllers\ScreenshotsController;
 use Carbon\Carbon;
 
 class TradesController extends Controller{
@@ -19,6 +20,14 @@ class TradesController extends Controller{
 
     public function delete($id){
         $trade = Trade::findOrFail($id);
+        $screenshotsPathData = ScreenshotsController::getScreenshotsByTrade($id);
+        if(!empty($screenshotsPathData)){
+            foreach($screenshotsPathData as $screenshotPath){
+                if (file_exists(public_path() . "//screenshots//" . $screenshotPath)) {
+                    unlink(public_path() . "//screenshots//" . $screenshotPath);
+                }
+            }
+        }
         $trade->delete();
         return $trade;
     }
@@ -286,10 +295,13 @@ class TradesController extends Controller{
             /* Loops through each screenshot uploaded and associates it with a trade */
             foreach($images as $key => $image){
                 $name=$image->getClientOriginalName();
-                $image->move('image',$name);
                 $screenshot = new Screenshot();
-                $screenshot -> screenshot_image = $name;
                 $screenshot->save();
+                $screenshotNameWithId = str_replace(".png", "_" . $screenshot->id, $name);
+                $screenshotFileName =  $screenshotNameWithId . ".png";
+                $screenshot -> screenshot_image = $screenshotFileName;
+                $screenshot->save();
+                $image->move('screenshots', $screenshotFileName);
                 $trade->existingScreenshots()->save($screenshot);
             }
         }
@@ -302,8 +314,12 @@ class TradesController extends Controller{
                 $oneImage = $images;
                 $name=$oneImage->getClientOriginalName();
                 $screenshot = new Screenshot();
-                $screenshot -> screenshot_image = $name;
                 $screenshot->save();
+                $screenshotNameWithId = str_replace(".png", "_" . $screenshot->id, $name);
+                $screenshotFileName =  $screenshotNameWithId . ".png";
+                $screenshot -> screenshot_image = $screenshotFileName;
+                $screenshot->save();
+                $image->move('screenshots', $screenshotFileName);
                 $trade->existingScreenshots()->save($screenshot);
             }
         }

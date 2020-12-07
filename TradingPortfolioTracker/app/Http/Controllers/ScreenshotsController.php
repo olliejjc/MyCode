@@ -22,10 +22,13 @@ class ScreenshotsController extends Controller
             $user->currentTrades()->save($trade);
             foreach($images as $key => $image){
                 $name=$image->getClientOriginalName();
-                $image->move('image',$name);
                 $screenshot = new Screenshot();
-                $screenshot -> screenshot_image = $name;
                 $screenshot->save();
+                $screenshotNameWithId = str_replace(".png", "_" . $screenshot->id, $name);
+                $screenshotFileName =  $screenshotNameWithId . ".png";
+                $screenshot -> screenshot_image = $screenshotFileName;
+                $screenshot->save();
+                $image->move('screenshots', $screenshotFileName);
                 $trade->existingScreenshots()->save($screenshot);
             }
         }
@@ -37,19 +40,25 @@ class ScreenshotsController extends Controller
             $oneImage = $images;
             $name=$oneImage->getClientOriginalName();
             $screenshot = new Screenshot();
-            $screenshot -> screenshot_image = $name;
             $screenshot->save();
+            $screenshotNameWithId = str_replace(".png", "_" . $screenshot->id, $name);
+            $screenshotFileName =  $screenshotNameWithId . ".png";
+            $screenshot -> screenshot_image = $screenshotFileName;
+            $screenshot->save();
+            $image->move('screenshots', $screenshotFileName);
             $trade->existingScreenshots()->save($screenshot);
         }
         $trade->save();
         $user->currentTrades()->save($trade);
     }
 
-    public function getScreenshotsByTrade($tradeID){
+    public static function getScreenshotsByTrade($tradeID){
         $screenshotPathData = array();
         $screenshots = Screenshot::where('trade_id', $tradeID)->get();
-        foreach($screenshots as $screenshot){
-            $screenshotPathData [] = $screenshot->screenshot_image;
+        if(!is_null($screenshots)){
+            foreach($screenshots as $screenshot){
+                $screenshotPathData [] = $screenshot->screenshot_image;
+            }
         }
         return $screenshotPathData;
     }

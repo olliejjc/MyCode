@@ -70,14 +70,21 @@ class TradesController extends Controller{
             $month = $date->format('F');
             $tradeProfitLoss = $trade -> profit_loss;
             $monthValue = Carbon::parse($month)->month;
-            $monthSelectedValue = Carbon::parse($monthSelected)->month;
             /* checks if there's profit/loss on the trade and then add remove it from the portfolio balance */
             if($tradeProfitLoss != null){
-                if($year < $yearSelected){
-                    $portfolioSize += $tradeProfitLoss;
+                if($monthSelected != "All Months"){
+                    if($year < $yearSelected){
+                        $portfolioSize += $tradeProfitLoss;
+                    }
+                    else if($year == $yearSelected){
+                        $monthSelectedValue = Carbon::parse($monthSelected)->month;
+                        if($monthValue <= $monthSelectedValue){
+                            $portfolioSize += $tradeProfitLoss;
+                        }
+                    }
                 }
-                else if($year == $yearSelected){
-                    if($monthValue <= $monthSelectedValue){
+                else{
+                    if($year < $yearSelected || $year == $yearSelected){
                         $portfolioSize += $tradeProfitLoss;
                     }
                 }
@@ -257,8 +264,15 @@ class TradesController extends Controller{
             $date = new Carbon( $tradeDate );
             $year = strval($date -> year);
             $month = $date->format('F');
-            if($year==$yearSelected && $month==$monthSelected){
-                $tradesWithMatchingDate [] = $trade;
+            if($monthSelected == "All Months"){
+                if($year==$yearSelected){
+                    $tradesWithMatchingDate [] = $trade;
+                }
+            }
+            else{
+                if($year==$yearSelected && $month==$monthSelected){
+                    $tradesWithMatchingDate [] = $trade;
+                }
             }
         }
         return $tradesWithMatchingDate;

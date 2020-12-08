@@ -16,7 +16,7 @@ class Screenshots extends Migration
         Schema::create('screenshots', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('screenshot_image')->default('');
+            $table->string('screenshot_image')->default("");
             $table->bigInteger('trade_id')->unsigned()->nullable();
         });
 

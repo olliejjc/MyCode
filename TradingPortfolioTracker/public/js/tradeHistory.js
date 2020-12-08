@@ -59,7 +59,7 @@ jQuery(document).ready(function($){
             success: function (data) {
                 var monthlyBalance = data[0];
                 var monthlyProfitLoss = data[1]
-                generateUpdatedTradeHistoryTotals(monthlyBalance, monthlyProfitLoss);
+                generateUpdatedTradeHistoryTotals(monthlyBalance, monthlyProfitLoss, month);
             },
             error: function (data) {
                 console.log(data);
@@ -344,7 +344,15 @@ function generateUpdatedTradeHistory(tradeMonth, tradeYear, tradesWithMatchingDa
 }
 
 /* Builds the display of total monthly balance and monthly profit and loss for the trade month selected */
-function generateUpdatedTradeHistoryTotals(monthlyBalance, monthlyProfitLoss){
+function generateUpdatedTradeHistoryTotals(monthlyBalance, monthlyProfitLoss, month){
+    if(month == "All Months"){
+        $('#monthlyBalanceTradingHistoryHeader').text("YEARLY BALANCE");
+        $('#monthlyProfitLossTradingHistoryHeader').text("YEARLY PROFIT/LOSS");
+    }
+    else{
+        $('#monthlyBalanceTradingHistoryHeader').text("MONTHLY BALANCE");
+        $('#monthlyProfitLossTradingHistoryHeader').text("MONTHLY PROFIT/LOSS");
+    }
     document.getElementById("tradeHistoryTotalsTableBody").innerHTML = "";
     if(monthlyBalance >= 0 & monthlyProfitLoss >= 0){
         $('#tradeHistoryTotalsTableBody').append("<tr><td>$" + monthlyBalance + "</td><td>$" + monthlyProfitLoss + "</td></tr>");

@@ -13,6 +13,7 @@
                     <div class="col-lg-2">
                         <select class="form-control" id="selectmonth" data-width="120px">
                             <option class="optionTitle" selected="selected" disabled="disabled">Month</option>
+                            <option class="tradeMonth" value="00">All Months</option>
                             <option class="tradeMonth" value="01">January</option>
                             <option class="tradeMonth" value="02">February</option>
                             <option class="tradeMonth" value="03">March</option>
@@ -156,8 +157,8 @@
                         <table id="tradeHistoryTotalsTable" class="table table-bordered">
                             <thead>
                                 <tr>
-                                    <th>MONTHLY BALANCE</th>
-                                    <th>MONTHLY PROFIT/LOSS</th>
+                                    <th id="monthlyBalanceTradingHistoryHeader">MONTHLY BALANCE</th>
+                                    <th id="monthlyProfitLossTradingHistoryHeader">MONTHLY PROFIT/LOSS</th>
                                 </tr>
                             </thead>
                             <tbody id="tradeHistoryTotalsTableBody">

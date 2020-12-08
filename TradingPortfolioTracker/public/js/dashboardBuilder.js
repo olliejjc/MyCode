@@ -142,11 +142,14 @@ function generatePortfolioHoldings(){
         url: '/trades',
         dataType: 'JSON',
         success: function (data) {
+            console.log(data);
+            data.sort(function(a, b) {
+                return new Date(a.date_trade_opened) - new Date(b.date_trade_opened);
+            });            
             var tradesOpened = false;
             /* Displays all open trades which is equivalent to live portfolio holdings */
             $.each(data, function(i, item) {
                 if(data[i].trade_opened == true){
-                    console.log(tradesOpened);
                     if(tradesOpened == false){
                         $('#portfolioHoldingsTable thead tr').append("<th>Holding Name</th><th>Price Purchased At</th><th>Trade Size</th><th>Trade Value</th><th>Date Trade Opened</th>");
                     }
@@ -253,12 +256,10 @@ function getSuggestedMinYAxis(dataset){
     }
     if(smallestValue > 0){
         var minYAxis = smallestValue * 0.97;
-        console.log(minYAxis);
         return minYAxis;
     }
     else{
         var minYAxis = smallestValue * 1.03;
-        console.log(minYAxis);
         return minYAxis;
     }
 }
@@ -273,12 +274,10 @@ function getSuggestedMaxYAxis(dataset){
     }
     if(largestValue < 0){
         var maxYAxis = largestValue * 0.97;
-        console.log(maxYAxis);
         return maxYAxis;
     }
     else{
         var maxYAxis = largestValue * 1.03;
-        console.log(maxYAxis);
         return maxYAxis;
     }
 }

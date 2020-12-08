@@ -218,6 +218,8 @@ class TradesController extends Controller{
                 }
             }
         }
+        $dateTradeOpenedColumn = array_column($tradesFromLatestMonth, 'date_trade_opened');
+        array_multisort($dateTradeOpenedColumn, SORT_ASC, $tradesFromLatestMonth);
         return $tradesFromLatestMonth;
     }
 
@@ -275,6 +277,8 @@ class TradesController extends Controller{
                 }
             }
         }
+        $dateTradeOpenedColumn = array_column($tradesWithMatchingDate, 'date_trade_opened');
+        array_multisort($dateTradeOpenedColumn, SORT_ASC, $tradesWithMatchingDate);
         return $tradesWithMatchingDate;
     }
 

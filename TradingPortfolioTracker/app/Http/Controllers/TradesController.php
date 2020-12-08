@@ -9,6 +9,9 @@ use Auth;
 use App\Screenshot;
 use App\Http\Controllers\ScreenshotsController;
 use Carbon\Carbon;
+use DateTime;
+use DatePeriod;
+use DateInterval;
 
 class TradesController extends Controller{
 
@@ -161,17 +164,46 @@ class TradesController extends Controller{
         }
         else if($timePeriod == ("Overall View")){
             $tradeYears = TradesController::getListOfTradeYears();
+            $allYears = TradesController::getListOfAllYearsFromInitialTrade($tradeYears);
             $user = User::where('username', Auth::user()->username)->first();
+            /* Adds starting balance and first trade year, will have same balance */
             $tradeChartDataSets[] = $user -> portfolio_size;
-            /* Gets the balance for each year */
-            foreach($tradeYears as $tradeYear){
-                $tradeMonths = TradesController::getTradeMonthsByYear($tradeYear);
-                $lastTradeMonth = $tradeMonths[count($tradeMonths)-1];
-                $monthlyBalance = TradesController::getMonthlyBalance($lastTradeMonth, $tradeYear);
+            $lastYearsBalance = $user -> portfolio_size;
+            /* Loops through all years and gets the latest balance of each year, if trades don't exist in a year it'll use last years balance */
+            foreach($allYears as $year){
+                if(in_array($year, $tradeYears)){
+                    $tradeMonths = TradesController::getTradeMonthsByYear($year);
+                    $lastTradeMonth = $tradeMonths[count($tradeMonths)-1];
+                    $monthlyBalance = TradesController::getMonthlyBalance($lastTradeMonth, $year);
+                    $tradeChartDataSets[] = $monthlyBalance;
+                    $lastYearsBalance = $monthlyBalance;
+                }
+                else{
+                    $tradeChartDataSets[] = $lastYearsBalance;
+                }
+            }
+            $trades = TradesController::getTradesByLatestMonth();
+            if(!empty($trades)){
+                $tradeMonth = TradesController::getTradeMonth($trades[0]);
+                $tradeYear = TradesController::getTradeYear($trades[0]);
+                $monthlyBalance = TradesController::getMonthlyBalance($tradeMonth, $tradeYear);
                 $tradeChartDataSets[] = $monthlyBalance;
             }
             return $tradeChartDataSets;
         }
+    }
+
+    /* Gets all years between first trade year and the current year */
+    function getListOfAllYearsFromInitialTrade($tradeYears){
+        $listOfYears = array();
+        if(!empty($tradeYears)){
+            $startYear = min($tradeYears);
+            $currentYear = date("Y");
+            for($year=$startYear; $year<=$currentYear; $year++) {
+                $listOfYears [] = $year;
+            }
+        }
+        return $listOfYears;
     }
 
     public function getMonthlyProfitLoss($monthSelected, $yearSelected){
@@ -287,7 +319,7 @@ class TradesController extends Controller{
             'asset_name' => 'required',
             'trade_size' => 'required|numeric|min:0.00|max:100000.00',
             'trade_value' => 'required|numeric|min:0.00|max:10000000.00',
-            'date_trade_opened' => 'required|date_format:Y-m-d|before:tomorrow|after_or_equal:2018-01-01',
+            'date_trade_opened' => 'required|date_format:Y-m-d|before:tomorrow|after_or_equal:2017-01-01',
             'price_purchased_at' => 'required|numeric|min:0.00|max:100000.00',
             'screenshots.*' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);

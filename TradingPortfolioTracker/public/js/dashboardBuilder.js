@@ -194,7 +194,7 @@ function getChartDataSet(timePeriod, yearPeriod){
         dataType: 'JSON',
         async: false,
         success: function (chartDataSet) {
-            //chartDataSetString = chartDataSet.map(String);
+            console.log(chartDataSet);
             chartDataSetString = chartDataSet;
         },
         error: function (data) {
@@ -240,9 +240,16 @@ function getLabels(timePeriod){
         return ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     }
     else{
-        var yearsWithTradesLabels = getYearsWithTrades();
-        yearsWithTradesLabels.splice(0, 0, "Starting Balance");
-        return yearsWithTradesLabels;
+        var yearsWithTrades = getYearsWithTrades();
+        var tradeYearLabels = [];
+        var firstTradeYear = Math.min.apply(Math, yearsWithTrades);
+        var currentYear = new Date().getFullYear();
+        /* Generate list of years between the first trade year and this year */
+        for (var year = firstTradeYear; year <= currentYear; year++) {
+            tradeYearLabels.push(year);
+        }
+        tradeYearLabels.push("Current Balance");
+        return tradeYearLabels;
     }
 }
 

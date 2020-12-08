@@ -62,4 +62,31 @@ class ScreenshotsController extends Controller
         }
         return $screenshotPathData;
     }
+
+    public function delete($activeScreenshotPath){
+        $id = ScreenShotsController::parsePathForID($activeScreenshotPath, "_", ".png");
+        $screenshot = Screenshot::findOrFail($id);
+        $tradeID = $screenshot -> trade_id;
+        if(!is_null($activeScreenshotPath) && !empty($activeScreenshotPath)){
+            if (file_exists(public_path() . "//screenshots//" . $activeScreenshotPath)) {
+                unlink(public_path() . "//screenshots//" . $activeScreenshotPath);
+            }
+        }
+        $screenshot->delete();
+        if(empty(ScreenShotsController::getScreenshotsByTrade($tradeID))){
+            $trade = Trade::findOrFail($tradeID);
+            $trade->has_screenshots = false;
+            $trade->save();
+        }
+        return $screenshot;
+    }
+
+    public function parsePathForID($string, $start, $end){
+        $string = ' ' . $string;
+        $ini = strrpos($string, $start);
+        if ($ini == 0) return '';
+        $ini += strlen($start);
+        $len = strpos($string, $end, $ini) - $ini;
+        return substr($string, $ini, $len);
+    }
 }

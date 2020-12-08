@@ -172,6 +172,27 @@ jQuery(document).ready(function($){
         });
     });
 
+    /* Handles deleting a screenshot */
+    $(document).on('click', '.deleteScreenshotButton', function(e) {
+        var activeScreenshotPath = $('.active .screenshotImage').attr("src");
+        activeScreenshotPath = activeScreenshotPath.replace("/screenshots/", "");
+        $.ajaxSetup({
+             headers: {
+                'X-CSRF-TOKEN': jQuery('meta[name="csrf-token"]').attr('content')
+            }
+        });
+        $.ajax({
+            url: "/deletescreenshot/"+activeScreenshotPath,
+            type: 'DELETE',
+            success: function (response) {
+                generateScreenshotDisplayModal(response.trade_id);
+            },
+            error: function (data) {
+                console.log(data);
+            }
+        });
+    });
+
     /* Shows the display modal to view screenshots in trade history */
     $('#screenshotDisplayModal').on('show.bs.modal',function(event){
         var tradeRowID = event.relatedTarget.id;
@@ -211,32 +232,39 @@ function generateScreenshotDisplayModal(id){
             'id': id,
         },
         success: function (response) {
-            document.getElementById("modalBodyScreenshotDisplay").innerHTML = "";
-            document.getElementById("modalFooterScreenshotDisplay").innerHTML = "";
-            /* Adds a carousel to the screenshot display modal */
-            $('#modalBodyScreenshotDisplay').append("<div id='carouselExample' class='carousel slide' data-ride='carousel'><div class='carousel-inner' id='carousel-inner-screenshotupload'></div></div>");
-            /* Loops through all the screenshots associated with a trade and adds them to the carousel */
-            for(var i = 0; i < response.length; i++){
-                if(i == 0){
-                    $('#carousel-inner-screenshotupload').append("<div class='carousel-item active'><img class='d-block w-100' src=/screenshots/" + response[i] + "></div>");
+            if (Array.isArray(response) && response.length) {    
+                document.getElementById("modalBodyScreenshotDisplay").innerHTML = "";
+                document.getElementById("modalFooterScreenshotDisplay").innerHTML = "";
+                /* Adds a carousel to the screenshot display modal */
+                $('#modalBodyScreenshotDisplay').append("<div id='carouselExample' class='carousel slide' data-ride='carousel'><div class='carousel-inner' id='carousel-inner-screenshotupload'></div></div>");
+                /* Loops through all the screenshots associated with a trade and adds them to the carousel */
+                for(var i = 0; i < response.length; i++){
+                    if(i == 0){
+                        $('#carousel-inner-screenshotupload').append("<div class='carousel-item active'><img class='screenshotImage d-block w-100' src=/screenshots/" + response[i] + "></div>");
+                    }
+                    else{
+                        $('#carousel-inner-screenshotupload').append("<div class='carousel-item'><img class='screenshotImage d-block w-100' src=/screenshots/" + response[i] + "></div>");
+                    }
                 }
-                else{
-                    $('#carousel-inner-screenshotupload').append("<div class='carousel-item'><img class='d-block w-100' src=/screenshots/" + response[i] + "></div>");
+                $('#modalFooterScreenshotDisplay').append("<div class='col-sm d-flex justify-content-start'><button type='button' class='btn btn-secondary deleteScreenshotButton'>Delete</button></div><div class='col-sm d-flex justify-content-center'><span id='numbertext'>1/" + (response.length) + "</span></div><div class='col-sm d-flex justify-content-end'><button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button></div>");
+                /* If there is more than one screenshot associated with a trade than add previous and next buttons to view different screenshots */
+                if(response.length>1){
+                    $('#carousel-inner-screenshotupload').append("<a class='carousel-control-prev' href='#carouselExample' role='button' data-slide='prev'><span class='carousel-control-prev-icon' aria-hidden='true'></span><span class='sr-only'>Previous</span></a>");
+                    $('#carousel-inner-screenshotupload').append("<a class='carousel-control-next' href='#carouselExample' role='button' data-slide='next'><span class='carousel-control-next-icon' aria-hidden='true'></span><span class='sr-only'>Next</span></a>");
                 }
+                
+                /* Displays the screenshot you are currently looking at and the amount you can scroll through */
+                $('#carouselExample').on('slid.bs.carousel', function() {
+                    var totalItems = $('.carousel-item').length;
+                    var currentIndex = $('div.active').index() + 1;
+                    $('#numbertext').html(''+currentIndex+'/'+totalItems+'');
+                });
             }
-            $('#modalFooterScreenshotDisplay').append("<div class='col-sm'></div><div class='col-sm d-flex justify-content-center'><span id='numbertext'>1/" + (response.length) + "</span></div><div class='col-sm d-flex justify-content-end'><button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button></div>");
-            /* If there is more than one screenshot associated with a trade than add previous and next buttons to view different screenshots */
-            if(response.length>1){
-                $('#carousel-inner-screenshotupload').append("<a class='carousel-control-prev' href='#carouselExample' role='button' data-slide='prev'><span class='carousel-control-prev-icon' aria-hidden='true'></span><span class='sr-only'>Previous</span></a>");
-                $('#carousel-inner-screenshotupload').append("<a class='carousel-control-next' href='#carouselExample' role='button' data-slide='next'><span class='carousel-control-next-icon' aria-hidden='true'></span><span class='sr-only'>Next</span></a>");
+            else{
+                console.log("here");
+                $('#screenshotDisplayModal').modal('hide');
+                $('#tradeHistoryTable #tradeHistoryTableBody #tradeRow'+id + " .span1").html("");
             }
-            
-            /* Displays the screenshot you are currently looking at and the amount you can scroll through */
-            $('#carouselExample').on('slid.bs.carousel', function() {
-                var totalItems = $('.carousel-item').length;
-                var currentIndex = $('div.active').index() + 1;
-                $('#numbertext').html(''+currentIndex+'/'+totalItems+'');
-            });
         },
         error: function (data) {
             console.log(data);

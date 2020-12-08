@@ -53,6 +53,8 @@ Route::group( ['middleware' => 'auth' ], function()
 
     Route::post('tradehistory', 'ScreenshotsController@store');
 
+    Route::delete('/deletescreenshot/{activeScreenshotPath}', 'ScreenshotsController@delete');
+
     Route::get('/liveportfolio', 'LivePortfolioController@index')->name('liveportfolio');
 });
 

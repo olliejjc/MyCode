@@ -109,12 +109,12 @@ class TradesController extends Controller{
             $i = 0;
             $j = 0;
             if($timePeriod == ("3 Month View") ){
-                /* check starts at 2 months ago */
-                $i=2;
+                /* check starts at 3 months ago, gets final balance of each month up to and not including the current month */
+                $i=3;
             }
             else if($timePeriod == ("6 Month View") ){
-                /* check starts at 5 months ago */
-                $i=5;
+                /* check starts at 6 months ago, gets final balance of each month up to and not including the current month  */
+                $i=6;
             }
 
             $currentMonth = $date->format('m');
@@ -125,7 +125,7 @@ class TradesController extends Controller{
             }
             $date = Carbon::now();
             /* loop through each month to be checked depending on time period */
-            for($i; $i >= 0; $i--){
+            for($i; $i > 0; $i--){
                 $monthSelected = $date->subMonth($i)->format('F');
                 /* check has passed into the next year so increment the year, e.g December 2019 -> January 2020 */
                 if($lastMonthChecked == "December" && $monthSelected == "January"){
@@ -148,16 +148,30 @@ class TradesController extends Controller{
             //$tradeMonths = TradesController::getTradeMonthsByYear($yearSelected);
             foreach($monthsInYear as $month){
                 if($currentYear == $yearSelected){
-                    $monthlyBalance = TradesController::getMonthlyBalance($month, $yearSelected);
-                    $tradeChartDataSets[] = $monthlyBalance;
-                    /* If we reach the current month we can't get data for the months after that so we break the loop */
-                    if($month == $currentMonth){
-                        break;
+                    //If its December the final balance will be next years opening balance so we don't need it for current year dataset
+                    if($month!=="December"){
+                        //run first time to get previous years final balance, will be Januarys opening balance
+                        if($month == "January"){
+                            $previousYearDecemberFinalBalance = TradesController::getMonthlyBalance("December", $yearSelected-1);
+                            $tradeChartDataSets[] = $previousYearDecemberFinalBalance;
+                        }
+                        $monthlyBalance = TradesController::getMonthlyBalance($month, $yearSelected);
+                        $tradeChartDataSets[] = $monthlyBalance;
+                        /* If we reach the current month we can't get data for the months after that so we break the loop */
+                        if($month == $currentMonth){
+                            break;
+                        }
                     }
                 }
                 else{
-                    $monthlyBalance = TradesController::getMonthlyBalance($month, $yearSelected);
-                    $tradeChartDataSets[] = $monthlyBalance;
+                    if($month!=="December"){
+                        if($month == "January"){
+                            $previousYearDecemberFinalBalance = TradesController::getMonthlyBalance("December", $yearSelected-1);
+                            $tradeChartDataSets[] = $previousYearDecemberFinalBalance;
+                        }
+                        $monthlyBalance = TradesController::getMonthlyBalance($month, $yearSelected);
+                        $tradeChartDataSets[] = $monthlyBalance;
+                    }
                 }
             }
             return $tradeChartDataSets;
@@ -317,7 +331,7 @@ class TradesController extends Controller{
     public function addNewTrade(Request $req){
         $validatedData = $req->validate([
             'asset_name' => 'required',
-            'trade_size' => 'required|numeric|min:0.00|max:100000.00',
+            'trade_size' => 'required|numeric|min:0.00|max:1000000.00',
             'trade_value' => 'required|numeric|min:0.00|max:10000000.00',
             'date_trade_opened' => 'required|date_format:Y-m-d|before:tomorrow|after_or_equal:2017-01-01',
             'price_purchased_at' => 'required|numeric|min:0.00|max:100000.00',
